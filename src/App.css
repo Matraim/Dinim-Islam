@@ -2,37 +2,101 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.question-card {
+  margin: 0 auto;
+  background-image: url('https://celes.club/uploads/posts/2022-11/1667353552_21-celes-club-p-fon-sportivnii-detskii-vkontakte-22.jpg');
+  padding: 2rem;
+  background-size: cover;
+  border-radius: 1rem;
+  color: rgb(20, 20, 20);
+  box-shadow: 0px 26.1px 59.3px rgba(0, 0, 0, 0.083),
+    0px 32.4px 135.1px rgba(0, 0, 0, 0.118),
+    0px 36.7px 237.8px rgba(0, 0, 0, 0.148),
+    0px 43.1px 366.3px rgba(0, 0, 0, 0.188), 0px 67px 500px rgba(0, 0, 0, 0.25);
+  width: 80%;
+  height: auto;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+li {
+  background-color: darkcyan;
+  padding: 1rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  position: relative;
+  right: 1.2rem;
+}
+
+li:hover {
+  background-color: rgb(16, 169, 169);
+}
+
+.question-text {
+  background-color: rgb(9, 204, 243);
+  font-size: 2.5rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 1rem;
+}
+
+.final-results {
+  margin: 0 auto;
+  background-color: #11a89d;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  border-radius: 1rem;
   color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  width: 50%;
+  height: 15rem;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: rgba(200, 27, 27, 0.877);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 5rem;
+}
+
+.social-media i {
+  font-size: 24px;
+  color: #030303;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-media i:hover {
+  color: #0077b5;
+  cursor: pointer;
+  transform: scale(1.2);
 }
