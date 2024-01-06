@@ -1,4 +1,4 @@
-# Quiz App - Sport
+# Quiz App - Islamic
 
 A simple quiz application focused on sports trivia, built using React.
 
