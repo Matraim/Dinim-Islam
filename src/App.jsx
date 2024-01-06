@@ -1,122 +1,56 @@
-import { useState } from 'react';
-import './App.css';
-import './Responsive.css';
+/* eslint-disable no-unused-vars */
+import React, { useState, useEffect } from 'react';
+import questions from './data/question';
+import './style/App.css';
+import './style/Responsive.css';
+import {
+  Button,
+  Grid,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+} from '@mui/material';
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Confetti from 'react-confetti';
+import useWindowSize from 'react-use/lib/useWindowSize';
+
+const confettiConfig = {
+  angle: 1,
+  spread: 360,
+  startVelocity: 40,
+  elementCount: 1,
+  dragFriction: 0.12,
+  duration: 3000,
+  stagger: 1,
+  recycle: false,
+  colors: ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a'],
+};
 
 function App() {
   const [showFinalResults, setShowFinalResults] = useState(false);
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [showAllAnswers, setShowAllAnswers] = useState(false);
+  const [isAnswersVisible, setIsAnswersVisible] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
 
-  const questions = [
-    {
-      text: 'Бисмиллах сөзүнүн мааниси кандай ?',
-      options: [
-        { id: 0, text: 'Жараткан Аллах Тааланын аты менен', isCorrect: true },
-        { id: 1, text: 'Кудай колдосо', isCorrect: false },
-        { id: 2, text: 'Аллах Улук', isCorrect: false },
-        { id: 3, text: 'Аллах Тааланын аты', isCorrect: false },
-      ],
-    },
-    {
-      text: 'Сколько игроков в бейсбольной команде?',
-      options: [
-        { id: 0, text: '7', isCorrect: false },
-        { id: 1, text: '6', isCorrect: false },
-        { id: 2, text: '9', isCorrect: true },
-        { id: 3, text: '8', isCorrect: false },
-      ],
-    },
-    {
-      text: 'Где находится самый большой боулинг-центр?',
-      options: [
-        { id: 0, text: 'Япония', isCorrect: true },
-        { id: 1, text: 'US', isCorrect: false },
-        { id: 2, text: 'Финляндия', isCorrect: false },
-        { id: 3, text: 'Сингапур', isCorrect: false },
-      ],
-    },
-    {
-      text: 'Какая страна выиграла ЧМ-2018?',
-      options: [
-        { id: 0, text: 'Франция', isCorrect: true },
-        { id: 1, text: 'Германия', isCorrect: false },
-        { id: 2, text: 'Америка', isCorrect: false },
-        { id: 3, text: 'Россия', isCorrect: false },
-      ],
-    },
-    {
-      text: 'Какой вид спорта считается «королем спорта»?',
-      options: [
-        { id: 0, text: 'Хоккей', isCorrect: false },
-        { id: 1, text: 'Футбол', isCorrect: true },
-        { id: 2, text: 'Американский Футбол', isCorrect: false },
-        { id: 3, text: 'Тетрис', isCorrect: false },
-      ],
-    },
-    {
-      text: 'Какое настоящее имя Мухаммеда Али?',
-      options: [
-        { id: 0, text: 'Чикаго Буллз', isCorrect: false },
-        { id: 1, text: 'Кассиус Клей', isCorrect: true },
-        { id: 2, text: 'Келеб Дрессел', isCorrect: true },
-        { id: 3, text: 'Майкл Фелпс', isCorrect: false },
-      ],
-    },
-    {
-      text: 'Сколько игроков в команде по мини-футболу?',
-      options: [
-        { id: 0, text: '5', isCorrect: true },
-        { id: 1, text: '6', isCorrect: false },
-        { id: 2, text: '7', isCorrect: false },
-        { id: 3, text: '8', isCorrect: false },
-      ],
-    },
-    {
-      text: 'Каким из перечисленных видов единоборств не занимался Брюс Ли?',
-      options: [
-        { id: 0, text: 'Ограждение', isCorrect: false },
-        { id: 1, text: 'Джит Кун До', isCorrect: false },
-        { id: 2, text: 'Ушу', isCorrect: true },
-        { id: 3, text: 'бокс', isCorrect: false },
-      ],
-    },
-    {
-      text: 'Откуда взялся термин «бильярд»?',
-      options: [
-        { id: 0, text: 'Франция', isCorrect: true },
-        { id: 1, text: 'Бельгия', isCorrect: false },
-        { id: 2, text: 'Венгрия', isCorrect: false },
-        { id: 3, text: 'Италия', isCorrect: false },
-      ],
-    },
-    {
-      text: ' Кто был первым британским игроком, выигравшим чемпионские титулы в четырех странах?',
-      options: [
-        { id: 0, text: 'Тур де Франс', isCorrect: false },
-        { id: 1, text: 'Ролан Гаррос.', isCorrect: false },
-        { id: 2, text: 'Дэвид Бекхэм.', isCorrect: true },
-        { id: 3, text: 'Лакросс.', isCorrect: false },
-      ],
-    },
-    {
-      text: 'Какая часть тела в футболе не может касаться мяча?',
-      options: [
-        { id: 0, text: 'Ноги', isCorrect: false },
-        { id: 1, text: 'Руки', isCorrect: true },
-        { id: 2, text: 'Голова', isCorrect: false },
-        { id: 3, text: 'Плечо', isCorrect: false },
-      ],
-    },
-    {
-      text: 'Сколько длился самый длинный розыгрыш очка в истории тенниса?',
-      options: [
-        { id: 0, text: '26 минут.', isCorrect: false },
-        { id: 1, text: '27 минут.', isCorrect: false },
-        { id: 2, text: '28 минут.', isCorrect: false },
-        { id: 3, text: '29 минут.', isCorrect: true },
-      ],
-    },
-  ];
+  const { width, height } = useWindowSize();
+
+  useEffect(() => {
+    if (score > 1) {
+      setShowConfetti(true);
+      setTimeout(() => {
+        setShowConfetti(false);
+      }, 1000);
+    }
+  }, [score]);
 
   const optionClicked = (isCorrect) => {
     if (isCorrect) {
@@ -127,6 +61,14 @@ function App() {
       setCurrentQuestion(currentQuestion + 1);
     } else {
       setShowFinalResults(true);
+      toast.success('Жыйынтыкты көрүү үчүн Үч сызыкты басыңыз', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
     }
   };
 
@@ -134,58 +76,134 @@ function App() {
     setShowFinalResults(false);
     setScore(0);
     setCurrentQuestion(0);
+    setShowAllAnswers(false);
+    setIsAnswersVisible(false);
+  };
+
+  const toggleAnswersVisibility = () => {
+    setIsAnswersVisible(!isAnswersVisible);
   };
 
   return (
     <div className="App">
-      <h1>Диним Ислам Кыргызча диний суроо жооптор</h1>
+      <h3>
+        Кыргызча диний суроо жооптор<span style={{ color: 'red' }}>.</span>
+      </h3>
+      <h4>
+        <span style={{ color: 'green' }}>رَبِّ زِدْنِي عِلْمًا </span> <br />
+        <br />
+        <span style={{ color: 'green' }}>Рoбби зидни ‘ильман </span>
+        <br />
+        Оо Роббим менин илимимди көбөйткүн
+        <span style={{ color: 'red' }}>.</span>
+        <br />
+        <span style={{ fontSize: '10px', color: 'green' }}>Tоха:114</span>
+      </h4>
 
-      <h3> Сиз {score} суроого туура жооп бердиңиз</h3>
-
-      {showFinalResults ? (
-        <div className={`final-results ${score > 6 ? 'celebration' : ''}`}>
-          <h1>Сынактын жыйынтыгы</h1>
-          <h2>
-            Сиз {questions.length} суроодон {score} суроого туура жооп
-            бердиңиз-(
-            {((score / questions.length) * 100).toFixed(0)}%)
-          </h2>
-          <div className={`smiley ${score > 6 ? 'happy' : 'sad'}`}>
-            {score > 6 ? '🎊' : '😩'}
+      <div className="main-content">
+        {showFinalResults ? (
+          <div className={`final-results ${score > 6 ? 'celebration' : ''}`}>
+            <button
+              style={{
+                display: 'flex',
+              }}
+              onClick={toggleAnswersVisibility}
+            >
+              <Confetti width={width} height={height} {...confettiConfig} />
+              <MenuOpenIcon />
+            </button>
+            <h1>Сынактын жалпы жыйынтыгы</h1>
+            <h3 className="custom-header">
+              Сиз {questions.length} суроодон {score} суроого туура жооп
+              бердиңиз - ({((score / questions.length) * 100).toFixed(0)}%)
+            </h3>
+            <div className={`smiley ${score > 6 ? 'happy' : 'sad'}`}>
+              {score > 6 ? '🎊' : '😩'}
+            </div>
+            <div className="fireworks" />
+            <Button onClick={restartGame} variant="contained" color="primary">
+              <ArrowLeftIcon /> Кайрадан
+            </Button>
           </div>
-          <div className="fireworks" />
-          <button onClick={restartGame}> Кайра кайталоо </button>
-        </div>
-      ) : (
-        <div className="question-card">
-          <h2>{currentQuestion + 1} - суроонун туура жообун тандаңыз </h2>
-          <h3 className="question-text">{questions[currentQuestion].text}</h3>
-          <ul>
-            {questions[currentQuestion].options.map((option) => (
-              <li
-                onClick={() => optionClicked(option.isCorrect)}
-                key={option.id}
-              >
-                {option.text}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-      <div className="social-media">
-        <a href="https://www.instagram.com/matraim.official/">
-          <i class="bx bxl-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/matraim-nurmatov-760473285/">
-          <i class="bx bxl-linkedin"></i>
-        </a>
-        <a href="https://t.me/MuhammedIbraghim">
-          <i class="bx bxl-telegram"></i>
-        </a>
-        <a href="https://github.com/Matraim">
-          <i class="bx bxl-github"></i>
-        </a>
+        ) : (
+          <div className="question-card">
+            <h2>{currentQuestion + 1} - суроонун туура жообун тандаңыз </h2>
+            <h3 className="question-text">{questions[currentQuestion].text}</h3>
+            <ul>
+              {questions[currentQuestion].options.map((option) => (
+                <li
+                  onClick={() => optionClicked(option.isCorrect)}
+                  key={option.id}
+                  className={option.isCorrect ? 'correct' : 'incorrect'}
+                >
+                  {option.text}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {isAnswersVisible && (
+          <div className="all-answers">
+            <h3>Суроо-жооптор</h3>
+            <TableContainer component={Paper}>
+              <Table>
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Суроолор</TableCell>
+                    <TableCell>Туура жооп</TableCell>
+                    <TableCell>Сиздин жооп</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {questions.map((question, index) => (
+                    <TableRow key={index}>
+                      <TableCell>
+                        {index + 1}. {question.text}
+                      </TableCell>
+                      <TableCell className="correct">
+                        {question.options.find((opt) => opt.isCorrect).text}
+                      </TableCell>
+                      <TableCell
+                        className={
+                          question.options[0].isCorrect
+                            ? 'correct'
+                            : 'incorrect'
+                        }
+                      >
+                        {question.options[0].text}
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </div>
+        )}
       </div>
+
+      <div className="footer">
+        <Grid container justifyContent="center">
+          <Grid item xs={12} sm={6}>
+            <div className="social-media">
+              <a href="https://www.instagram.com/matraim.official/">
+                <i className="bx bxl-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/matraim-nurmatov-760473285/">
+                <i className="bx bxl-linkedin"></i>
+              </a>
+              <a href="https://t.me/MuhammedIbraghim">
+                <i className="bx bxl-telegram"></i>
+              </a>
+              <a href="https://github.com/Matraim">
+                <i className="bx bxl-github"></i>
+              </a>
+            </div>
+          </Grid>
+        </Grid>
+      </div>
+
+      <ToastContainer />
     </div>
   );
 }
