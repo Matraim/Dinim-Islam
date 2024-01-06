@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-alert('Attention no mobile version');
+import './Responsive.css';
 
 function App() {
   const [showFinalResults, setShowFinalResults] = useState(false);
@@ -9,12 +9,12 @@ function App() {
 
   const questions = [
     {
-      text: ' В какой стране больше всего олимпийских золотых медалей по плаванию?',
+      text: 'Бисмиллах сөзүнүн мааниси кандай ?',
       options: [
-        { id: 0, text: 'Китай', isCorrect: false },
-        { id: 1, text: 'KGZ', isCorrect: false },
-        { id: 2, text: 'Австралия', isCorrect: false },
-        { id: 3, text: 'США', isCorrect: true },
+        { id: 0, text: 'Жараткан Аллах Тааланын аты менен', isCorrect: true },
+        { id: 1, text: 'Кудай колдосо', isCorrect: false },
+        { id: 2, text: 'Аллах Улук', isCorrect: false },
+        { id: 3, text: 'Аллах Тааланын аты', isCorrect: false },
       ],
     },
     {
@@ -138,27 +138,28 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Проверь себя - Пройти онлайн тест</h1>
+      <h1>Диним Ислам Кыргызча диний суроо жооптор</h1>
 
-      <h2> на {score} вопросов ответили правильно</h2>
+      <h3> Сиз {score} суроого туура жооп бердиңиз</h3>
 
       {showFinalResults ? (
-        <div className="final-results">
-          <h1>Результаты тестирования</h1>
+        <div className={`final-results ${score > 6 ? 'celebration' : ''}`}>
+          <h1>Сынактын жыйынтыгы</h1>
           <h2>
-            Правильно ответили {score} из {questions.length} - (
+            Сиз {questions.length} суроодон {score} суроого туура жооп
+            бердиңиз-(
             {((score / questions.length) * 100).toFixed(0)}%)
           </h2>
-          <button onClick={restartGame}> Играть Заново</button>
+          <div className={`smiley ${score > 6 ? 'happy' : 'sad'}`}>
+            {score > 6 ? '🎊' : '😩'}
+          </div>
+          <div className="fireworks" />
+          <button onClick={restartGame}> Кайра кайталоо </button>
         </div>
       ) : (
         <div className="question-card">
-          <h2>
-            ответьте на {currentQuestion + 1}-й вопрос переди еще{' '}
-            {questions.length} вопросов
-          </h2>
+          <h2>{currentQuestion + 1} - суроонун туура жообун тандаңыз </h2>
           <h3 className="question-text">{questions[currentQuestion].text}</h3>
-
           <ul>
             {questions[currentQuestion].options.map((option) => (
               <li
