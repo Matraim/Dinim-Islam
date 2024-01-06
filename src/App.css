@@ -4,11 +4,11 @@
 
 .question-card {
   margin: 0 auto;
-  background-image: url('https://celes.club/uploads/posts/2022-11/1667353552_21-celes-club-p-fon-sportivnii-detskii-vkontakte-22.jpg');
+  background-image: url('https://images.pexels.com/photos/2233399/pexels-photo-2233399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   padding: 2rem;
-  background-size: cover;
+  background-size: contain;
   border-radius: 1rem;
-  color: rgb(20, 20, 20);
+  color: #fff;
   box-shadow: 0px 26.1px 59.3px rgba(0, 0, 0, 0.083),
     0px 32.4px 135.1px rgba(0, 0, 0, 0.118),
     0px 36.7px 237.8px rgba(0, 0, 0, 0.148),
@@ -23,7 +23,7 @@ ul {
 }
 
 li {
-  background-color: darkcyan;
+  background-color: rgb(250, 250, 250);
   padding: 1rem;
   border: 1px solid white;
   border-radius: 1rem;
@@ -32,14 +32,27 @@ li {
   text-align: center;
   position: relative;
   right: 1.2rem;
+  color: #030303;
 }
 
 li:hover {
-  background-color: rgb(16, 169, 169);
+  background-color: rgb(212, 208, 208);
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.221);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.311);
+  }
+  100% {
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.244);
+  }
 }
 
 .question-text {
-  background-color: rgb(9, 204, 243);
+  background-image: url('');
   font-size: 2.5rem;
   padding: 1rem 2rem;
   text-align: center;
@@ -48,6 +61,7 @@ li:hover {
   font-size: 2rem;
   font-weight: bold;
   border-radius: 1rem;
+  animation: glow 5s infinite;
 }
 
 .final-results {
@@ -55,9 +69,9 @@ li:hover {
   background-color: #11a89d;
   background-size: cover;
   background-position: center;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 1rem;
-  color: white;
+  color: black;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   width: 50%;
@@ -99,4 +113,17 @@ button {
   color: #0077b5;
   cursor: pointer;
   transform: scale(1.2);
+}
+
+.smiley {
+  font-size: 2em;
+  margin: 10px;
+}
+
+.happy {
+  color: green;
+}
+
+.sad {
+  color: red;
 }

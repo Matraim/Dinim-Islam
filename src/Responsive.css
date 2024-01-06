@@ -1,0 +1,41 @@
+@media screen and (max-width: 375px) {
+  .App {
+    padding: 5px;
+  }
+
+  .question-card {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .question-text {
+    font-size: 0.5rem;
+    padding: 1rem;
+  }
+
+  li {
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-top: 0.8rem;
+    right: 1rem;
+  }
+
+  .final-results {
+    width: 90%;
+    height: auto;
+  }
+
+  button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .social-media {
+    padding: 1rem;
+    gap: 10px;
+  }
+
+  .social-media i {
+    font-size: 20px;
+  }
+}
