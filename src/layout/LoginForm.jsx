@@ -48,7 +48,7 @@ const LoginForm = ({ onSignIn, onSignUp }) => {
         userData.push(values);
         localStorage.setItem('userData', JSON.stringify(userData));
 
-        navigate('/quiz');
+        navigate('/app');
       } catch (error) {
         console.error('Authentication error:', error);
       }

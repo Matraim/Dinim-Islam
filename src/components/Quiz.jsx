@@ -18,6 +18,7 @@ import Confetti from 'react-confetti';
 import useWindowSize from 'react-use/lib/useWindowSize';
 import questions from '../data/question.js';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import { Link } from 'react-router-dom';
 
 const confettiConfig = {
   angle: 1,
@@ -90,7 +91,7 @@ const Quiz = () => {
       <h4>
         <span style={{ color: 'green' }}>رَبِّ زِدْنِي عِلْمًا </span> <br />
         <br />
-        <span style={{ color: 'green' }}>Рoбби зидни ‘ильман </span>
+        <span style={{ color: 'green' }}>Рoбби зидni ‘ильман </span>
         <br />
         Оо Роббим менин илимимди көбөйткүн
         <span style={{ color: 'red' }}>.</span>
@@ -119,9 +120,11 @@ const Quiz = () => {
               {score > 6 ? '🎊' : '😩'}
             </div>
             <div className="fireworks" />
-            <Button onClick={restartGame} variant="contained" color="primary">
-              <ArrowLeftIcon /> Кайрадан
-            </Button>
+            <Link to="/login" className="register-link">
+              <Button onClick={restartGame} variant="contained" color="primary">
+                <ArrowLeftIcon /> Кайрадан
+              </Button>
+            </Link>
           </div>
         ) : (
           <div className="question-card">
