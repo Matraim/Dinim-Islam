@@ -12,6 +12,7 @@ import {
   IconButton,
 } from '@mui/material';
 import { Google as GoogleIcon } from '@mui/icons-material';
+import { signInWithGooglePopup } from '../firebase';
 
 const LoginForm = ({ onSignIn, onSignUp }) => {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -150,9 +151,12 @@ const LoginForm = ({ onSignIn, onSignUp }) => {
             ? "Don't have an account? Sign Up"
             : 'Already have an account? Sign In'}
         </p>
-        <div style={styles.googleSignInContainer}>
+        <div
+          style={styles.googleSignInContainer}
+          onClick={signInWithGooglePopup}
+        >
           <span>Войти с помощью</span>
-          <IconButton color="primary" onClick={() => {}}>
+          <IconButton color="primary">
             <GoogleIcon />
           </IconButton>
         </div>
@@ -199,6 +203,7 @@ const styles = {
     backgroundColor: '#f5f5f5',
     padding: '10px',
     borderRadius: '5px',
+    cursor: 'pointer',
   },
 };
 
