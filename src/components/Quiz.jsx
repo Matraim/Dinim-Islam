@@ -126,6 +126,7 @@ const Quiz = () => {
         ) : (
           <div className="question-card">
             <h2>{currentQuestion + 1} - суроонун туура жообун тандаңыз </h2>
+            <br />
             <h3 className="question-text">{questions[currentQuestion].text}</h3>
             <ul>
               {questions[currentQuestion].options.map((option) => (
