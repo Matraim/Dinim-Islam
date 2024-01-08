@@ -15,6 +15,7 @@ import rootReducer from './slices/reducers';
 const persistConfig = {
   key: 'quiz-islamik',
   storage,
+  whitelist: [],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

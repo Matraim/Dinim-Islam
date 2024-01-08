@@ -1,5 +1,10 @@
 import React, { useEffect } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 import LoginForm from './layout/LoginForm';
 import Quiz from './components/Quiz';
 import AdminPanel from './components/AdminPanel';
@@ -10,6 +15,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase';
 import { toast } from 'react-toastify';
 import { actionsAuth, selectorAuth } from './redux/slices/auth';
+import MainLayout from './layout';
 
 function App() {
   const dispatch = useDispatch();
@@ -17,9 +23,6 @@ function App() {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-      console.log('====================================');
-      console.log(currentUser);
-      console.log('====================================');
       if (currentUser) {
         try {
           dispatch(actionsAuth.signIn(currentUser));
@@ -27,6 +30,7 @@ function App() {
           if (error instanceof Error) {
             toast.error(error.message);
           }
+          console.log(error);
         }
       } else {
         toast.warning('You are not Authenticated');
@@ -38,12 +42,21 @@ function App() {
     };
   }, [dispatch]);
 
+  if (!isLoggedIn) {
+    return (
+      <Router>
+        <LoginForm />
+      </Router>
+    );
+  }
+
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LoginForm />} />
-        <Route path="/quiz" element={<Quiz />} />
-        <Route path="/admin" element={<AdminPanel />} />
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Quiz />} />
+          <Route path="/admin" element={<AdminPanel />} />
+        </Route>
       </Routes>
     </Router>
   );
