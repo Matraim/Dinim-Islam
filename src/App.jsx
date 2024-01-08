@@ -1,10 +1,5 @@
 import React, { useEffect } from 'react';
-import {
-  HashRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginForm from './layout/LoginForm';
 import Quiz from './components/Quiz';
 import AdminPanel from './components/AdminPanel';
@@ -53,7 +48,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<MainLayout />}>
+        <Route path="*" element={<MainLayout />}>
           <Route index element={<Quiz />} />
           <Route path="/admin" element={<AdminPanel />} />
         </Route>
