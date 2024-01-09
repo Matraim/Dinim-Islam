@@ -1,13 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import NamazImage from '../assets/ImagesGreatPersonalities/33333.jpeg';
-import AjylykImage from '../assets/ImagesGreatPersonalities/33333.jpeg';
-import OrozoImage from '../assets/ImagesGreatPersonalities/33333.jpeg';
-import ZeketImage from '../assets/ImagesGreatPersonalities/33333.jpeg';
-import KurmandykImage from '../assets/ImagesGreatPersonalities/33333.jpeg';
-import Banner from '../assets/ImagesGreatPersonalities/33333.jpeg';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import Banner from '../assets/ImagesGreatPersonalities/33333.jpeg';
+import bannercard1 from '../assets/ImagesGreatPersonalities/33333.jpeg';
+import bannercard2 from '../assets/ImagesGreatPersonalities/33333.jpeg';
+import bannercard3 from '../assets/ImagesGreatPersonalities/33333.jpeg';
+import bannercard4 from '../assets/ImagesGreatPersonalities/33333.jpeg';
+import bannercard5 from '../assets/ImagesGreatPersonalities/33333.jpeg';
+
+const images = [
+  bannercard1,
+  bannercard2,
+  bannercard3,
+  bannercard4,
+  bannercard5,
+];
+
+const listData = ['Shahada', 'Namaz', 'Orozo', 'Zeket', 'Ajylyk'];
 
 const Home = () => {
   return (
@@ -19,73 +29,23 @@ const Home = () => {
       <Section>
         <Title>Исламдын 5 парзы</Title>
         <List>
-          <StyledLink>
-            <ListItem>
-              <Card>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={NamazImage}
-                  alt="Namaz"
-                />
-                <CardContent>
-                  <Typography>Namaz</Typography>
-                </CardContent>
-              </Card>
-            </ListItem>
-          </StyledLink>
-          <ListItem>
-            <Card>
-              <CardMedia
-                component="img"
-                height="140"
-                image={AjylykImage}
-                alt="Ajylyk"
-              />
-              <CardContent>
-                <Typography>Ajylyk</Typography>
-              </CardContent>
-            </Card>
-          </ListItem>
-          <ListItem>
-            <Card>
-              <CardMedia
-                component="img"
-                height="140"
-                image={OrozoImage}
-                alt="Orozo"
-              />
-              <CardContent>
-                <Typography>Orozo</Typography>
-              </CardContent>
-            </Card>
-          </ListItem>
-          <ListItem>
-            <Card>
-              <CardMedia
-                component="img"
-                height="140"
-                image={ZeketImage}
-                alt="Zeket"
-              />
-              <CardContent>
-                <Typography>Zeket</Typography>
-              </CardContent>
-            </Card>
-          </ListItem>
-          <ListItem>
-            <Card>
-              <CardMedia
-                component="img"
-                height="140"
-                image={KurmandykImage}
-                alt="Kurmandyk challyy"
-              />
-              <CardContent>
-                <Typography>Kurmandyk challyy</Typography>
-              </CardContent>
-            </Card>
-          </ListItem>
+          {listData.map((item, index) => (
+            <StyledLink to={`/${item.toLowerCase()}`} key={index}>
+              <ListItem>
+                <Card>
+                  <CardMedia
+                    component="img"
+                    height="140"
+                    image={images[index]}
+                    alt={item}
+                  />
+                  <CardContent>
+                    <Typography>{item}</Typography>
+                  </CardContent>
+                </Card>
+              </ListItem>
+            </StyledLink>
+          ))}
         </List>
       </Section>
       <Section>
@@ -99,7 +59,6 @@ const Home = () => {
           allowfullscreen
         ></iframe>
         <h4 style={{ textAlign: 'center', padding: '1rem' }}>
-          {' '}
           Your browser does not support the video tag.
         </h4>
       </Section>
@@ -118,23 +77,19 @@ const Section = styled.div`
 
 const Title = styled.h2`
   text-align: center;
-  padding: 1.5rem;
+  padding: 1.1rem;
 `;
 
 const List = styled.ul`
   list-style: none;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
-`;
-
-const StyledLink = styled(Link)`
-  text-decoration: none;
+  overflow-x: auto;
 `;
 
 const ListItem = styled.li`
-  flex: 1 1 calc(20% - 20px);
+  flex: 0 0 calc(20% - 20px);
   border-radius: 5px;
   overflow: hidden;
   text-align: center;
@@ -143,10 +98,13 @@ const ListItem = styled.li`
 
 const Image = styled.img`
   width: 100%;
-  max-width: auto;
   height: auto;
+  object-fit: cover;
   border-radius: 0.5rem;
-  padding-top: 1rem;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
 `;
 
 export default Home;

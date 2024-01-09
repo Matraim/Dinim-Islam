@@ -26,9 +26,9 @@ const History = () => {
             <Link to={figure.path}>
               <CardImage src={figure.image} alt={figure.name} />
               <CardTitle>{figure.name} </CardTitle>
-              <StyleHeaderTextStatus>{figure.status}</StyleHeaderTextStatus>
-              <StyleCardSmallText>{figure.text}</StyleCardSmallText>
             </Link>
+            <StyleHeaderTextStatus>{figure.status}</StyleHeaderTextStatus>
+            <StyleCardSmallText>{figure.text}</StyleCardSmallText>
           </Card>
         ))}
       </CardContainer>
