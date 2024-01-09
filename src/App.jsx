@@ -25,6 +25,11 @@ import SaidIbnZaid from './islam-history/SaidIbnZaid';
 import TalhaIbnUbaidullah from './islam-history/TalhaIbnUbaudyllah';
 import ZubairIbnAvvam from './islam-history/ZubairIbnAvvam';
 import Home from './components/Home';
+import Namaz from './isllamdynparzy/Namaz';
+import Shahada from './isllamdynparzy/Shahada';
+import Orozo from './isllamdynparzy/Orozo';
+import Zeket from './isllamdynparzy/Zeket';
+import Ajylyk from './isllamdynparzy/Ajylyk';
 
 function App() {
   const dispatch = useDispatch();
@@ -68,7 +73,12 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/info" element={<History />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/namaz" element={<Namaz />} />
+          <Route path="/shahada" element={<Shahada />} />
+          <Route path="/orozo" element={<Orozo />} />
+          <Route path="/zeket" element={<Zeket />} />
+          <Route path="/ajylyk" element={<Ajylyk />} />
           <Route path="/abubakr" element={<AbuBakr />} />
           <Route path="/umaribnhattab" element={<UmarIbnAlHattab />} />
           <Route path="/usmanibnaffan" element={<UsmanIbnAffan />}></Route>
