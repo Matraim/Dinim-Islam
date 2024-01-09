@@ -37,13 +37,8 @@
 }
 
 @media screen and (max-width: 423px) {
-  .App {
-    padding: 5px;
-  }
-
   .question-card {
     width: 90%;
-    padding: 1rem;
   }
 
   .question-text {
@@ -55,7 +50,7 @@
     font-size: 1rem;
     padding: 0.5rem;
     margin-top: 0.8rem;
-    right: 1rem;
+    left: 0.05rem;
   }
 
   .final-results {
@@ -79,13 +74,8 @@
 }
 
 @media screen and (max-width: 840px) {
-  .App {
-    padding: 5px;
-  }
-
   .question-card {
     width: 90%;
-    padding: 1rem;
   }
 
   .question-text {
@@ -123,7 +113,6 @@
 @media screen and (max-width: 1200px) {
   .question-card {
     width: 90%;
-    padding: 1rem;
   }
 
   .question-text {
@@ -137,9 +126,14 @@
     margin-top: 0.8rem;
     right: 1rem;
   }
+  h3,
+  h4 {
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+  }
 
   .final-results {
-    width: 90%;
+    width: 100%;
     height: auto;
   }
 

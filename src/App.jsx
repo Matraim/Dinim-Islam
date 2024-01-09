@@ -3,14 +3,17 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginForm from './layout/LoginForm';
 import Quiz from './components/Quiz';
 import AdminPanel from './components/AdminPanel';
-import './style/App.css';
-import './style/Responsive.css';
+import MainLayout from './layout';
 import { useDispatch, useSelector } from 'react-redux';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase';
 import { toast } from 'react-toastify';
 import { actionsAuth, selectorAuth } from './redux/slices/auth';
-import MainLayout from './layout';
+import About from './components/About';
+import Contact from './components/Contact';
+import History from './components/History';
+import './style/App.css';
+import './style/Responsive.css';
 
 function App() {
   const dispatch = useDispatch();
@@ -48,9 +51,12 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="*" element={<MainLayout />}>
+        <Route path="/" element={<MainLayout />}>
           <Route index element={<Quiz />} />
           <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/info" element={<History />} />
         </Route>
       </Routes>
     </Router>
