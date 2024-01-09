@@ -44,6 +44,14 @@ export default function Header() {
     navigate('/info');
   };
 
+  const HandleQuiz = () => {
+    navigate('/Quiz');
+  };
+
+  const HandleHome = () => {
+    navigate('/home');
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -55,16 +63,20 @@ export default function Header() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <MosqueIcon />
+            <MosqueIcon onClick={HandleHome} />
           </IconButton>
 
           <Box sx={{ flexGrow: 1 }} />
 
           {isLoggedIn && (
             <>
+              <Button color="inherit" onClick={HandleQuiz}>
+                Quiz
+              </Button>
               <Button color="inherit" onClick={handleAboutUs}>
                 About
               </Button>
+
               <Button color="inherit" onClick={handleContact}>
                 Contact
               </Button>
