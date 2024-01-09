@@ -4,17 +4,19 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-// import MenuIcon from '@mui/icons-material/Menu';
-import LogoutIcon from '@mui/icons-material/Logout';
+import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
+import MosqueIcon from '@mui/icons-material/Mosque';
 import { signOut } from 'firebase/auth';
 import { auth } from '../firebase';
 import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux';
 import { actionsAuth, selectorAuth } from '../redux/slices/auth';
+import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
   const { isLoggedIn } = useSelector(selectorAuth);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleLogout = async () => {
     try {
@@ -30,6 +32,18 @@ export default function Header() {
     }
   };
 
+  const handleAboutUs = () => {
+    navigate('/About');
+  };
+
+  const handleContact = () => {
+    navigate('/contact');
+  };
+
+  const handleHistory = () => {
+    navigate('/info');
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -40,19 +54,27 @@ export default function Header() {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
-          ></IconButton>
+          >
+            <MosqueIcon />
+          </IconButton>
 
           <Box sx={{ flexGrow: 1 }} />
 
           {isLoggedIn && (
-            <Button
-              color="error"
-              variant="contained"
-              startIcon={<LogoutIcon />}
-              onClick={handleLogout}
-            >
-              Log Out
-            </Button>
+            <>
+              <Button color="inherit" onClick={handleAboutUs}>
+                About
+              </Button>
+              <Button color="inherit" onClick={handleContact}>
+                Contact
+              </Button>
+              <Button color="inherit" onClick={handleHistory}>
+                History
+              </Button>
+              <Button color="inherit" onClick={handleLogout}>
+                <MeetingRoomIcon />
+              </Button>
+            </>
           )}
         </Toolbar>
       </AppBar>

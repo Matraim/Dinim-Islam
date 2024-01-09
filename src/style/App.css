@@ -5,10 +5,16 @@
 .App {
   text-align: center;
 }
+h3,
+h4 {
+  padding-bottom: 2rem;
+  font-size: 1.3rem;
+}
 
 h6 {
   padding-bottom: 3px;
 }
+
 .question-card {
   margin: 0 auto;
   background-image: url('https://images.pexels.com/photos/2233399/pexels-photo-2233399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
@@ -33,13 +39,14 @@ li {
   font-size: 1.5rem;
   margin-top: 1rem;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  right: 1.2rem;
   color: #030303;
 }
 
 li:hover {
-  background-color: rgb(212, 208, 208);
+  background-color: rgb(192, 192, 192);
 }
 
 @keyframes glow {
@@ -76,7 +83,7 @@ li:hover {
   color: #fff;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-  width: 30%;
+  width: 40%;
   height: 20rem;
   cursor: pointer;
 }

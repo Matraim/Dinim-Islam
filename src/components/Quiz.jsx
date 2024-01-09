@@ -32,13 +32,13 @@ const confettiConfig = {
 };
 
 const Quiz = () => {
+  const [questionsState, setQuestions] = useState(questions);
   const [showFinalResults, setShowFinalResults] = useState(false);
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showAllAnswers, setShowAllAnswers] = useState(false);
   const [isAnswersVisible, setIsAnswersVisible] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
-
   const { width, height } = useWindowSize();
 
   useEffect(() => {
@@ -50,16 +50,29 @@ const Quiz = () => {
     }
   }, [score]);
 
-  const optionClicked = (isCorrect) => {
+  const optionClicked = (isCorrect, optionIndex) => {
+    if (!isCorrect) {
+      const updatedQuestions = [...questionsState];
+      const updatedQuestion = { ...updatedQuestions[currentQuestion] };
+      updatedQuestion.options = updatedQuestion.options.map(
+        (option, index) => ({
+          ...option,
+          chosen: index === optionIndex,
+        })
+      );
+      updatedQuestions[currentQuestion] = updatedQuestion;
+      setQuestions(updatedQuestions);
+    }
+
     if (isCorrect) {
       setScore(score + 1);
     }
 
-    if (currentQuestion < questions.length - 1) {
+    if (currentQuestion < questionsState.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
       setShowFinalResults(true);
-      toast.success('Жыйынтыкты көрүү үчүн Үч сызыкты басыңыз', {
+      toast.success('Жоопторду көрүү үчүн үч сызыкты басыңыз', {
         position: 'top-right',
         autoClose: 5000,
         hideProgressBar: true,
@@ -81,7 +94,6 @@ const Quiz = () => {
   const toggleAnswersVisibility = () => {
     setIsAnswersVisible(!isAnswersVisible);
   };
-
   return (
     <div className="App">
       <h3>
@@ -112,8 +124,8 @@ const Quiz = () => {
             </button>
             <h1>Сынактын жалпы жыйынтыгы</h1>
             <h3 className="custom-header">
-              Сиз {questions.length} суроодон {score} суроого туура жооп
-              бердиңиз - ({((score / questions.length) * 100).toFixed(0)}%)
+              Сиз {questionsState.length} суроодон {score} суроого туура жооп
+              бердиңиз - ({((score / questionsState.length) * 100).toFixed(0)}%)
             </h3>
             <div className={`smiley ${score > 6 ? 'happy' : 'sad'}`}>
               {score > 6 ? '🎊' : '😩'}
@@ -127,13 +139,21 @@ const Quiz = () => {
           <div className="question-card">
             <h2>{currentQuestion + 1} - суроонун туура жообун тандаңыз </h2>
             <br />
-            <h3 className="question-text">{questions[currentQuestion].text}</h3>
+            <h3 className="question-text">
+              {questionsState[currentQuestion].text}
+            </h3>
             <ul>
-              {questions[currentQuestion].options.map((option) => (
+              {questionsState[currentQuestion].options.map((option, index) => (
                 <li
-                  onClick={() => optionClicked(option.isCorrect)}
+                  onClick={() => optionClicked(option.isCorrect, index)}
                   key={option.id}
-                  className={option.isCorrect ? 'correct' : 'incorrect'}
+                  className={`${
+                    option.isCorrect
+                      ? 'correct'
+                      : option.chosen
+                      ? 'incorrect'
+                      : ''
+                  }`}
                 >
                   {option.text}
                 </li>
@@ -155,7 +175,7 @@ const Quiz = () => {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {questions.map((question, index) => (
+                  {questionsState.map((question, index) => (
                     <TableRow key={index}>
                       <TableCell>
                         {index + 1}. {question.text}
@@ -179,27 +199,6 @@ const Quiz = () => {
             </TableContainer>
           </div>
         )}
-      </div>
-
-      <div className="footer">
-        <Grid container justifyContent="center">
-          <Grid item xs={12} sm={6}>
-            <div className="social-media">
-              <a href="https://www.instagram.com/matraim.official/">
-                <i className="bx bxl-instagram"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/matraim-nurmatov-760473285/">
-                <i className="bx bxl-linkedin"></i>
-              </a>
-              <a href="https://t.me/MuhammedIbraghim">
-                <i className="bx bxl-telegram"></i>
-              </a>
-              <a href="https://github.com/Matraim">
-                <i className="bx bxl-github"></i>
-              </a>
-            </div>
-          </Grid>
-        </Grid>
       </div>
 
       <ToastContainer />
