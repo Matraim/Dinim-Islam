@@ -20,6 +20,7 @@ const StyleContainer = styled.footer`
   text-align: center;
   margin: 1rem;
   padding: 1rem;
+  border-radius: 0.3rem;
 `;
 
 const StyleContent = styled.div`
