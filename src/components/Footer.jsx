@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <StyleContainer>
       <StyleContent>
-        <p>&copy; 2024 Dinim. All rights reserved.</p>
-        <p>Contact us: example@email.com</p>
+        <p>&copy; 2024 Dinim-Islam All rights reserved.</p>
+        <p>Contact us : Kyrgyz@email.com</p>
       </StyleContent>
     </StyleContainer>
   );
