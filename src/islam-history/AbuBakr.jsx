@@ -93,7 +93,7 @@ const Title = styled.h1`
 `;
 
 const Image = styled.img`
-  max-width: 100%;
+  max-width: 500px;
   height: auto;
   border-radius: 8px;
   margin-bottom: 20px;

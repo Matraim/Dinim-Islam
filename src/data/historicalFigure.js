@@ -59,11 +59,11 @@ const historicalFigures = [
     text: 'Саад Ибн Абу Ваккас(рaдиаллаху анху)',
   },
   {
-    name: 'Усман Ибн Аффан',
-    path: '/usmanibnaffan',
-    image: UsmanIbnAffan,
+    name: 'TalhaIbnUbaudyllah',
+    path: '/talhaubnubaidullah',
+    image: TalhaIbnUbaudyllah,
     status: 'Бейиштик Сахаба',
-    text: 'Усман Ибн Аффан(рaдиаллаху анху)',
+    text: 'TalhaIbnUbaudyllah(рaдиаллаху анху)',
   },
   {
     name: 'SaidIbnZaid',
