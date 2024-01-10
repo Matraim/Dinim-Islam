@@ -5,13 +5,13 @@ import styled from 'styled-components';
 
 const Namaz = () => {
   return (
-    <Container>
+    <Containeer>
       <Content>
         <Card>
           <Image src={namazImg} alt="namaz" />
         </Card>
 
-        <Card>
+        <StyleCard>
           <CardContent>
             <Text variant="h4" gutterBottom>
               НАМАЗ – БЕЙИШТИН АЧКЫЧЫ
@@ -24,10 +24,10 @@ const Namaz = () => {
               <li>Куптан</li>
             </ul>
           </CardContent>
-        </Card>
+        </StyleCard>
 
         <Card>
-          <CardContent>
+          <Content>
             <Text variant="h5" gutterBottom>
               Кошумча ибадаттар
             </Text>
@@ -39,7 +39,7 @@ const Namaz = () => {
               <li>Кажет Намазы</li>
               <li>Нафил Намазы</li>
             </ul>
-          </CardContent>
+          </Content>
         </Card>
         <Author>
           <Typography variant="body2" fontStyle="italic" textAlign="center">
@@ -48,7 +48,7 @@ const Namaz = () => {
           </Typography>
         </Author>
       </Content>
-    </Container>
+    </Containeer>
   );
 };
 
@@ -57,7 +57,13 @@ export default Namaz;
 const Content = styled.div`
   margin-top: 20px;
   display: grid;
+  color: #190909;
   gap: 20px;
+  cursor: pointer;
+`;
+
+const StyleCard = styled(Card)`
+  border-color: 1rem solid black;
 `;
 
 const Image = styled.img`
@@ -72,16 +78,23 @@ const Text = styled.div`
   font-size: 3rem;
   line-height: 1.6;
   text-align: center;
-  color: #333;
+  color: #190909;
+  background-color: wheat;
+  border-radius: 1rem;
 `;
 
 const Author = styled.div`
-  font-style: italic;
-  text-align: right;
+  font-style: inherit;
+  text-align: center;
   margin-top: 20px;
 
   p {
-    font-size: 14px;
-    color: #555;
+    color: #179ed8;
+    font-style: inherit;
+    font-family: Arial, Helvetica, sans-serif;
   }
+`;
+
+const Containeer = styled(Container)`
+  padding: 2rem;
 `;

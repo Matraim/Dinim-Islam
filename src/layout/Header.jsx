@@ -76,7 +76,6 @@ export default function Header() {
               <Button color="inherit" onClick={handleAboutUs}>
                 About
               </Button>
-
               <Button color="inherit" onClick={handleContact}>
                 Contact
               </Button>
