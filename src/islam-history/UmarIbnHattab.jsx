@@ -5,7 +5,7 @@ import UmarIbnHattabImg from '../assets/images/20131203_Istanbul_118.jpg';
 const UmarIbnHattab = () => {
   return (
     <Container>
-      <Title>Умар Ибн Аль Хаттаб (радыяллаху анх)</Title>
+      <Title>Умар Ибн Аль Хаттаб (радыяллаху анхy)</Title>
       <Image src={UmarIbnHattabImg} alt="khalif" />
       <Paragraph>
         Абу Бакр Сыддык – ашара-и мубашшаранын эң алгачкысы. Пайгамбарлардан
@@ -94,7 +94,7 @@ const Title = styled.h1`
 `;
 
 const Image = styled.img`
-  max-width: 100%;
+  max-width: 500px;
   height: auto;
   border-radius: 8px;
   margin-bottom: 20px;
