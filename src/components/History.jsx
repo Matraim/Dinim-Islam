@@ -7,17 +7,16 @@ const History = () => {
   return (
     <div>
       <StyleHeaderText>
-        <h2>Great Personalities</h2>
+        <h2>Бейиш менен сүйүнчүлөнгөн 10 Сахаба.</h2>
         <br />
+        <Sallallahualeihivvassallam>ﷺ</Sallallahualeihivvassallam>
         <h2>
-          Muhammad Sallallahu Alaihi Wassallam{' '}
-          <Sallallahualeihivvassallam>ﷺ</Sallallahualeihivvassallam>
+          Алла Таала сахабалардан ыраазы болгондугун, аларды сүйгөндүгүн Куранда
+          айтып кеткен: «Алла Таала алардан (сахабалардан) ыраазы, алар да
+          (сахабалар) Алла Тааладан ыраазы». <br />
+          (Баййина сүрөсү, 98/8-аят)
         </h2>
         <br />
-        <h4>
-          Biographies of the 10 great companions who received the glad tidings
-          of Paradise
-        </h4>
       </StyleHeaderText>
 
       <CardContainer>
@@ -34,13 +33,11 @@ const History = () => {
       </CardContainer>
       <CardContainerr>
         <h4>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, quos
-          beatae, voluptatibus nobis neque recusandae molestias reprehenderit
-          aut vero ullam laboriosam ab cum architecto cupiditate cumque fugiat
-          quod voluptate accusamus! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Corporis adipisci ipsa qui error, optio ut
-          accusantium perferendis reiciendis ipsum aperiam dolor voluptate
-          necessitatibus veritatis voluptas vel unde non nesciunt aliquid?
+          Пайгамбарыбызды (САВ) тирүү кезинеде көрүп, ага ыйман келтирип,
+          сохбеттерине катышкан момун-мусулмандарды сахаба деп айтабыз. Бир адам
+          мусулман боло электе пайгамбарыбызды көрүп, пайгамбарыбыз (САВ)
+          дүйнөдөн көзү өткөндөн кийин ыйманга келген болсо, же мусулман болуп,
+          кийин динден кайткан болсо, сахаба деп эсептелбейт.
         </h4>
       </CardContainerr>
     </div>

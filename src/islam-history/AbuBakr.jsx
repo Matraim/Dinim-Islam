@@ -1,10 +1,12 @@
 import React from 'react';
 import AbuBakrSyddykImg from '../assets/images/АбуБакрСыддык.gif';
 import styled from 'styled-components';
+
 const AbuBakr = () => {
   return (
     <Container>
-      <Title>Абу Бакр Сыддык (радыяллаху анх)</Title>
+      <Title>Абу Бакр Сыддык (радыяллаху анх) </Title>
+
       <Image src={AbuBakrSyddykImg} alt="khalif" />
       <Paragraph>
         Абу Бакр Сыддык – ашара-и мубашшаранын эң алгачкысы. Пайгамбарлардан
