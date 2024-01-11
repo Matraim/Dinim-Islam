@@ -71,16 +71,16 @@ export default function Header() {
           {isLoggedIn && (
             <>
               <Button color="inherit" onClick={HandleQuiz}>
-                Quiz
+                Test
+              </Button>
+              <Button color="inherit" onClick={handleHistory}>
+                History
               </Button>
               <Button color="inherit" onClick={handleAboutUs}>
                 About
               </Button>
               <Button color="inherit" onClick={handleContact}>
                 Contact
-              </Button>
-              <Button color="inherit" onClick={handleHistory}>
-                History
               </Button>
               <Button color="inherit" onClick={handleLogout}>
                 <MeetingRoomIcon />
