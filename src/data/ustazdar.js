@@ -3,7 +3,7 @@ import MaksatBekAjy from '../assets/images/максатбекажы.jpeg';
 const Ustazdar = [
   {
     name: 'Максатбек Ажы Токтомушев',
-    path: '/',
+    path: '/maksatajy',
     image: MaksatBekAjy,
     text: 'Кыргызыстан экс муфтий',
     status: 'Экс Муфтий',
