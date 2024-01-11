@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import historicalFigures from '../data/historicalFigure';
+import Bismillah from '../data/islam';
+import Ustazdar from '../data/ustazdar';
 
 const History = () => {
   return (
@@ -40,6 +42,68 @@ const History = () => {
           кийин динден кайткан болсо, сахаба деп эсептелбейт.
         </h4>
       </CardContainerr>
+      <div>
+        <IslamtextStyle>Islam</IslamtextStyle>
+        <CardContainer>
+          {Bismillah.map((figure, index) => (
+            <Card key={index}>
+              <Link to={figure.path}>
+                <CardImage src={figure.image} alt={figure.name} />
+                <CardTitle>{figure.name} </CardTitle>
+              </Link>
+
+              <StyleCardSmallText>{figure.text}</StyleCardSmallText>
+              <StyleCardSmallText>{figure.status}</StyleCardSmallText>
+            </Card>
+          ))}
+        </CardContainer>
+        <CardContainerr>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni quod
+          doloremque praesentium nulla est a tempora voluptatibus eaque
+          aspernatur. Dicta, officia molestiae veritatis illo at asperiores
+          facere ad reiciendis quo? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Laboriosam minima, placeat soluta quisquam voluptate
+          dicta aut voluptas dolorem molestiae dolor labore maxime ad quas quis
+          consequatur est cupiditate rerum. Ut. Lorem ipsum, dolor sit amet
+          consectetur adipisicing elit. Magni quod doloremque praesentium nulla
+          est a tempora voluptatibus eaque aspernatur. Dicta, officia molestiae
+          veritatis illo at asperiores facere ad reiciendis quo? Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Laboriosam minima,
+          placeat soluta quisquam voluptate dicta aut voluptas dolorem molestiae
+          dolor labore maxime ad quas quis consequatur est cupiditate rerum. Ut.
+        </CardContainerr>
+      </div>
+      <div>
+        <IslamtextStyle>Биздин Устаздар</IslamtextStyle>
+        <CardContainer>
+          {Ustazdar.map((figure, index) => (
+            <Card key={index}>
+              <Link to={figure.path}>
+                <CardImage src={figure.image} alt={figure.name} />
+                <CardTitle>{figure.name}</CardTitle>
+              </Link>
+
+              <StyleCardSmallText>{figure.text}</StyleCardSmallText>
+              <StyleCardSmallText>{figure.status}</StyleCardSmallText>
+            </Card>
+          ))}
+        </CardContainer>
+        <CardContainerr>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni quod
+          doloremque praesentium nulla est a tempora voluptatibus eaque
+          aspernatur. Dicta, officia molestiae veritatis illo at asperiores
+          facere ad reiciendis quo? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Laboriosam minima, placeat soluta quisquam voluptate
+          dicta aut voluptas dolorem molestiae dolor labore maxime ad quas quis
+          consequatur est cupiditate rerum. Ut. Lorem ipsum, dolor sit amet
+          consectetur adipisicing elit. Magni quod doloremque praesentium nulla
+          est a tempora voluptatibus eaque aspernatur. Dicta, officia molestiae
+          veritatis illo at asperiores facere ad reiciendis quo? Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Laboriosam minima,
+          placeat soluta quisquam voluptate dicta aut voluptas dolorem molestiae
+          dolor labore maxime ad quas quis consequatur est cupiditate rerum. Ut.
+        </CardContainerr>
+      </div>
     </div>
   );
 };
@@ -85,6 +149,12 @@ const Card = styled.div`
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden;
+`;
+
+const IslamtextStyle = styled.h2`
+  text-align: center;
+  font-size: 60px;
+  padding: 2rem;
 `;
 
 const CardImage = styled.img`
