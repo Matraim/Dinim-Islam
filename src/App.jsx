@@ -31,6 +31,7 @@ import Orozo from './isllamdynparzy/Orozo';
 import Zeket from './isllamdynparzy/Zeket';
 import Ajylyk from './isllamdynparzy/Ajylyk';
 import Footer from './components/Footer';
+import MaksatAjy from './ustazdar/MaksatAjy';
 
 function App() {
   const dispatch = useDispatch();
@@ -91,6 +92,7 @@ function App() {
           <Route path="/abuubaidah" element={<AbuUbaidah />}></Route>
           <Route path="/saadibnvakkas" element={<SaadIbnAbuVakkas />}></Route>
           <Route path="/saidibnzaid" element={<SaidIbnZaid />}></Route>
+          <Route path="/maksatajy" element={<MaksatAjy />}></Route>
 
           <Route
             path="/talhaubnubaidullah"

@@ -52,6 +52,10 @@ export default function Header() {
     navigate('/home');
   };
 
+  const HandleNamaz = () => {
+    navigate('/namaz');
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -78,6 +82,9 @@ export default function Header() {
               </Button>
               <Button color="inherit" onClick={handleAboutUs}>
                 About
+              </Button>
+              <Button color="inherit" onClick={HandleNamaz}>
+                Namaz
               </Button>
               <Button color="inherit" onClick={handleContact}>
                 Contact
