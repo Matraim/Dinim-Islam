@@ -1,4 +1,5 @@
 import MaksatBekAjy from '../assets/images/максатбекажы.jpeg';
+import ChubakAjyImg from '../assets/images/chubakajy.jpg';
 
 const Ustazdar = [
   {
@@ -9,11 +10,11 @@ const Ustazdar = [
     status: 'Экс Муфтий',
   },
   {
-    name: 'Максатбек Ажы Токтомушев',
-    path: '/',
+    name: 'Шейх Чубак ажы Жалилов',
+    path: '/chubakajy',
     text: 'Кыргызыстан экс муфтий',
     status: 'Экс Муфтий',
-    image: MaksatBekAjy,
+    image: ChubakAjyImg,
   },
   {
     name: 'Максатбек Ажы Токтомушев',
