@@ -49,8 +49,23 @@ const ChubakAjy = () => {
           allowfullscreen
         ></iframe>
         <VideoInfo>
-          <VideoTitle>Максатбек ажы Токтомушев</VideoTitle>
-          <VideoSubtitle>Жашоого үмүт берет </VideoSubtitle>
+          <VideoTitle>Чубак Ажы Жалилов (р.a)</VideoTitle>
+          <VideoSubtitle>Позитив суроо жооптор</VideoSubtitle>
+        </VideoInfo>
+      </VideoCard>
+      <VideoCard>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/Uc3xONseoTU?si=KPwpjLWCLTWMp6L-"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <VideoInfo>
+          <VideoTitle>Чубак Ажы Жалилов (р.a)</VideoTitle>
+          <VideoSubtitle>БАКТЫЛУУЛУККА ЖЕТЕЛЕГЕН 6 НЕРСЕ</VideoSubtitle>
         </VideoInfo>
       </VideoCard>
     </div>
