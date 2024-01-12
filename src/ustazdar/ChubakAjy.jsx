@@ -34,25 +34,51 @@ const VideoTitle = styled.h2`
   margin-bottom: 5px;
   font-size: 16px;
 `;
+const VideosRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px;
+`;
 
 const ChubakAjy = () => {
   return (
     <div>
-      <VideoCard>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/_t8J7Vm-Cxs?si=wJxYQsxzSBVYxdmU"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-        <VideoInfo>
-          <VideoTitle>Максатбек ажы Токтомушев</VideoTitle>
-          <VideoSubtitle>Жашоого үмүт берет </VideoSubtitle>
-        </VideoInfo>
-      </VideoCard>
+      <VideosRow>
+        <VideoCard>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/_t8J7Vm-Cxs?si=wJxYQsxzSBVYxdmU"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <VideoInfo>
+            <VideoTitle>Чубак Ажы Жалилов (р.a)</VideoTitle>
+            <VideoSubtitle>Жашоого үмүт берет </VideoSubtitle>
+          </VideoInfo>
+        </VideoCard>
+      </VideosRow>
+      <VideosRow>
+        <VideoCard>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Uc3xONseoTU?si=eHLmCB9OoUNJByYO"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+
+          <VideoInfo>
+            <VideoTitle>Чубак Ажы Жалилов (р.a)</VideoTitle>
+            <VideoSubtitle>БАКТЫЛУУЛУККА ЖЕТЕЛЕГЕН 6 НЕРСЕ.</VideoSubtitle>
+          </VideoInfo>
+        </VideoCard>
+      </VideosRow>
     </div>
   );
 };
