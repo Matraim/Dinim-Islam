@@ -60,8 +60,6 @@ const ChubakAjy = () => {
             <VideoSubtitle>Жашоого үмүт берет </VideoSubtitle>
           </VideoInfo>
         </VideoCard>
-      </VideosRow>
-      <VideosRow>
         <VideoCard>
           <iframe
             width="560"
@@ -72,10 +70,39 @@ const ChubakAjy = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
-
           <VideoInfo>
             <VideoTitle>Чубак Ажы Жалилов (р.a)</VideoTitle>
             <VideoSubtitle>БАКТЫЛУУЛУККА ЖЕТЕЛЕГЕН 6 НЕРСЕ.</VideoSubtitle>
+          </VideoInfo>
+        </VideoCard>
+        <VideoCard>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/ZE9RFepYyaI?si=h8NZnEoL499kU04r"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <VideoInfo>
+            <VideoTitle>Чубак Ажы Жалилов (р.a)</VideoTitle>
+            <VideoSubtitle>АДАМЗАТ канткенде оңолот ?</VideoSubtitle>
+          </VideoInfo>
+        </VideoCard>
+        <VideoCard>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/R5iMYIKQaCc?si=RsHHjr48qsa9ehJl"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <VideoInfo>
+            <VideoTitle>Чубак Ажы Жалилов (р.a)</VideoTitle>
+            <VideoSubtitle>Чубак устаздын ачуусу келген учурлары</VideoSubtitle>
           </VideoInfo>
         </VideoCard>
       </VideosRow>
