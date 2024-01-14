@@ -1,6 +1,7 @@
 import MaksatBekAjy from '../assets/images/максатбекажы.jpeg';
 import ChubakAjyImg from '../assets/images/chubakajy.jpg';
 import Abdushukurajyimg from '../assets/images/abdushukurajy.jpeg';
+import ErmekAjyImg from '../assets//images/ermekajy.png';
 
 const Ustazdar = [
   {
@@ -25,11 +26,11 @@ const Ustazdar = [
     image: Abdushukurajyimg,
   },
   {
-    name: 'Максатбек Ажы Токтомушев',
-    path: '/',
-    text: 'Кыргызыстан экс муфтий',
-    status: 'Экс Муфтий',
-    image: MaksatBekAjy,
+    name: 'Эрмек ажы Тынай уулу',
+    path: '/ermekajy',
+    text: 'Жин илимин 10 жыл алган устаз',
+    status: 'Рукыячы',
+    image: ErmekAjyImg,
   },
 ];
 
