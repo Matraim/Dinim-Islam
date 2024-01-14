@@ -1,60 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const VideosRow = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 20px;
-`;
-
-const VideoCard = styled.div`
-  flex: 0 0 23%;
-  margin: 10px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.02);
-  }
-
-  iframe {
-    width: 100%;
-    height: 250px;
-    border: none;
-  }
-`;
-
-const VideoInfo = styled.div`
-  padding: 10px;
-  text-align: center;
-`;
-
-const VideoTitle = styled.h2`
-  color: #333;
-  margin-bottom: 5px;
-  font-size: 16px;
-`;
-
-const VideoSubtitle = styled.h3`
-  color: #555;
-  font-size: 14px;
-`;
-
-const BannerText = styled.div`
-  text-align: center;
-  font-size: 3rem;
-  padding-bottom: 2rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-`;
-
 const MaksatAjy = () => {
   return (
     <div>
-      <BannerText>Устаз Максатбек Ажы Токтомушевтин сабактары</BannerText>
+      <BannerText>Устаз Максатбек Ажы Токтомушев</BannerText>
       <VideosRow>
         <VideoCard>
           <iframe
@@ -183,3 +133,53 @@ const MaksatAjy = () => {
 };
 
 export default MaksatAjy;
+
+const VideosRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px;
+`;
+
+const VideoCard = styled.div`
+  flex: 0 0 23%;
+  margin: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+  }
+`;
+
+const VideoInfo = styled.div`
+  padding: 10px;
+  text-align: center;
+`;
+
+const VideoTitle = styled.h2`
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 16px;
+`;
+
+const VideoSubtitle = styled.h3`
+  color: #555;
+  font-size: 14px;
+`;
+
+const BannerText = styled.div`
+  text-align: center;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+`;

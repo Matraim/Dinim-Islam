@@ -34,6 +34,7 @@ import Footer from './components/Footer';
 import MaksatAjy from './ustazdar/MaksatAjy';
 import ChubakAjy from './ustazdar/ChubakAjy';
 import Abdushukurajy from './ustazdar/Abdushukurajy';
+import ErmekAjy from './ustazdar/ErmekAjy';
 
 function App() {
   const dispatch = useDispatch();
@@ -97,6 +98,7 @@ function App() {
           <Route path="/maksatajy" element={<MaksatAjy />}></Route>
           <Route path="/chubakAjy" element={<ChubakAjy />}></Route>
           <Route path="/abdushukurajy" element={<Abdushukurajy />}></Route>
+          <Route path="/ermekajy" element={<ErmekAjy />}></Route>
 
           <Route
             path="/talhaubnubaidullah"

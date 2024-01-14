@@ -1,25 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Abdushukurajy = () => {
+const ErmekAjy = () => {
   return (
     <div>
-      <BannerText>Шейх Абдишүкүр Ажы Нарматов </BannerText>
+      <BannerText>Устаз Эрмек Ажы Тынай уулу</BannerText>
       <VideosRow>
         <VideoCard>
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/3ajOoVI7utc?si=3Lg_V_knILkM73XR"
+            src="https://www.youtube.com/embed/dIMX858Cfk4?si=4HjNlVCjZJBdyvZ4"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
           <VideoInfo>
-            <VideoTitle>Устаз Абдишүкүр Ажы Нарматов.</VideoTitle>
+            <VideoTitle>Устаз Эрмек Ажы Тынай уулу</VideoTitle>
             <VideoSubtitle>
-              РФ, ХАБАРОВСК ШААРЫНДАГЫ МЕКЕНДЕШТЕРГЕ НАСААТ...
+              ШАЙТАНДЫН АДАМДАРДЫН АРАСЫНДА 10 ДОСУ КИМ?
             </VideoSubtitle>
           </VideoInfo>
         </VideoCard>
@@ -27,31 +27,27 @@ const Abdushukurajy = () => {
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/1YYZfH48Thw?si=8QWAA5q1DPDaQ993"
+            src="https://www.youtube.com/embed/5sTvrjA2sGM?si=mlAQ3pLNa_3di6eY"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
           <VideoInfo>
-            <VideoTitle>Чубак Ажы Жалилов (р.a)</VideoTitle>
-            <VideoSubtitle>БАКТЫЛУУЛУККА ЖЕТЕЛЕГЕН 6 НЕРСЕ.</VideoSubtitle>
+            <VideoTitle>Устаз Эрмек Ажы Тынай уулу</VideoTitle>
+            <VideoSubtitle>
+              МУСУЛМАН АДАМ СӨЗСҮЗ ИЛИМДҮҮ БОЛУШУ КЕРЕК! ТУУГАНЫМ ЖАШООДОН АРТТА
+              КАЛБА!
+            </VideoSubtitle>
           </VideoInfo>
         </VideoCard>
         <VideoCard>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/ZE9RFepYyaI?si=h8NZnEoL499kU04r"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+          МУСУЛМАН АДАМ СӨЗСҮЗ ИЛИМДҮҮ БОЛУШУ КЕРЕК! ТУУГАНЫМ ЖАШООДОН АРТТА
+          КАЛБА!
           <VideoInfo>
-            <VideoTitle>Шейх Абдишүкүр Нарматов.</VideoTitle>
+            <VideoTitle>Устаз Эрмек Ажы Тынай уулу</VideoTitle>
             <VideoSubtitle>
-              Сиздин жашооңузду өзгөртө турган сабак. Ош, Аль-Бухари мечити.{' '}
+              ИЙГИЛИККЕ ЖЕТҮҮНҮ КААЛАСАҢ АНДА УШУЛ НЕРСЕНИ КЫЛ!
             </VideoSubtitle>
           </VideoInfo>
         </VideoCard>
@@ -59,16 +55,16 @@ const Abdushukurajy = () => {
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/3ajOoVI7utc?si=3Lg_V_knILkM73XR"
+            src="https://www.youtube.com/embed/RApeTuewryw?si=y5t8yu_3APFcXH25"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
           <VideoInfo>
-            <VideoTitle>Устаз Абдишүкүр Нарматов.</VideoTitle>
+            <VideoTitle>Устаз Эрмек Ажы Тынай уулу</VideoTitle>
             <VideoSubtitle>
-              РФ, ХАБАРОВСК ШААРЫНДАГЫ МЕКЕНДЕШТЕРГЕ НАСААТ...
+              ӨЧӨШПӨГҮЛӨ,ЖӨӨЛӨШПӨГҮЛӨ, ТАЛАШПАГЫЛА! ТААСИРДҮҮ САБАК!
             </VideoSubtitle>
           </VideoInfo>
         </VideoCard>
@@ -76,31 +72,16 @@ const Abdushukurajy = () => {
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/R5iMYIKQaCc?si=RsHHjr48qsa9ehJl"
+            src="https://www.youtube.com/embed/WNwvwX5WaJ4?si=LtdsH00NJVkk9D1P"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
           <VideoInfo>
-            <VideoTitle>Чубак Ажы Жалилов (р.a)</VideoTitle>
-            <VideoSubtitle>Чубак устаздын ачуусу келген учурлары</VideoSubtitle>
-          </VideoInfo>
-        </VideoCard>
-        <VideoCard>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/3ajOoVI7utc?si=3Lg_V_knILkM73XR"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-          <VideoInfo>
-            <VideoTitle>Устаз Абдишүкүр Нарматов.</VideoTitle>
+            <VideoTitle>Устаз Эрмек Ажы Тынай уулу</VideoTitle>
             <VideoSubtitle>
-              РФ, ХАБАРОВСК ШААРЫНДАГЫ МЕКЕНДЕШТЕРГЕ НАСААТ...
+              СТРЕССТЕН ЧЫГЫШ ҮЧҮН ЭМНЕ КЫЛУУ КЕРЕК?
             </VideoSubtitle>
           </VideoInfo>
         </VideoCard>
@@ -108,16 +89,32 @@ const Abdushukurajy = () => {
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/3ajOoVI7utc?si=3Lg_V_knILkM73XR"
+            src="https://www.youtube.com/embed/ElCukrrwSIg?si=rZQKT1S7VfJcPsTy"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+
+          <VideoInfo>
+            <VideoTitle>Устаз Эрмек Ажы Тынай уулу</VideoTitle>
+            <VideoSubtitle>Жашоого үмүт берет </VideoSubtitle>
+          </VideoInfo>
+        </VideoCard>
+        <VideoCard>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/9LMn1tiZlho?si=ir96JrhlshbgTJN_"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
           <VideoInfo>
-            <VideoTitle>Устаз Абдишүкүр Нарматов.</VideoTitle>
+            <VideoTitle>Устаз Эрмек Ажы Тынай уулу</VideoTitle>
             <VideoSubtitle>
-              РФ, ХАБАРОВСК ШААРЫНДАГЫ МЕКЕНДЕШТЕРГЕ НАСААТ...
+              БИЛИП АЛЫҢЫЗ! АЛЛАХ ЖАМАН КӨРГӨН АДАМДЫН СЫПАТТАРЫ!
             </VideoSubtitle>
           </VideoInfo>
         </VideoCard>
@@ -125,16 +122,17 @@ const Abdushukurajy = () => {
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/3ajOoVI7utc?si=3Lg_V_knILkM73XR"
+            src="https://www.youtube.com/embed/LyWmEAwpOZg?si=mRpeLuJEd6dEzlhb"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
           <VideoInfo>
-            <VideoTitle>Устаз Абдишүкүр Нарматов.</VideoTitle>
+            <VideoTitle>Устаз Эрмек Ажы Тынай уулу</VideoTitle>
             <VideoSubtitle>
-              РФ, ХАБАРОВСК ШААРЫНДАГЫ МЕКЕНДЕШТЕРГЕ НАСААТ...
+              ЖҮРӨКТӨР ТАЗАЛАНСА, ЖҮРӨК ТЫНЧ БОЛОТ! ОШОНДУКТАН ЖҮРӨКТҮ ТАЗА
+              КАРМА!
             </VideoSubtitle>
           </VideoInfo>
         </VideoCard>
@@ -143,14 +141,13 @@ const Abdushukurajy = () => {
   );
 };
 
-export default Abdushukurajy;
+export default ErmekAjy;
 
-const BannerText = styled.div`
-  text-align: center;
-  font-size: 3rem;
-  padding-bottom: 2rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+const VideosRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px;
 `;
 
 const VideoCard = styled.div`
@@ -171,10 +168,6 @@ const VideoCard = styled.div`
     border: none;
   }
 `;
-const VideoSubtitle = styled.h3`
-  color: #555;
-  font-size: 14px;
-`;
 
 const VideoInfo = styled.div`
   padding: 10px;
@@ -186,9 +179,16 @@ const VideoTitle = styled.h2`
   margin-bottom: 5px;
   font-size: 16px;
 `;
-const VideosRow = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 20px;
+
+const VideoSubtitle = styled.h3`
+  color: #555;
+  font-size: 14px;
+`;
+
+const BannerText = styled.div`
+  text-align: center;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 `;
