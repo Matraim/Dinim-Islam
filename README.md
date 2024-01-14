@@ -1,32 +1,44 @@
-# Quiz App - Islamic
+# Islamic Website
 
-A simple quiz application focused on sports trivia, built using React.
+Welcome to [Dinim Islam]! This project aims to [briefly describe the purpose of your website].
 
-## Table of Contents
+## Technologies Used
 
-- [Overview](#overview)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- React
+- Firebase
+- Formik
+- Redux Toolkit
 
-## Overview
 
-This quiz app is designed to test users' knowledge of sports. It provides a set of questions related to various sports, allowing users to answer and evaluate their sports knowledge. The application is built using React, making it interactive and user-friendly.
+## Getting Started
 
-## Features
+### Installation
 
-- Multiple-choice questions on various sports topics.
-- Interactive user interface.
-- Score tracking to monitor user performance.
-- Responsive design for a seamless experience on different devices.
+1. Clone the repository: `git clone https://github.com/your-username/your-repository.git`
+2. Navigate to the project folder: `cd your-repository`
+3. Install dependencies: `npm install`
 
-## Installation
+## Usage
 
-To get started with the quiz app locally, follow these steps:
+Describe how to run the application or any relevant usage information.
 
-1. Clone the repository:
+## Screenshots
 
-   ```bash
-   git clone https://github.com/Matraim/quiz-app-sport.git
+Include screenshots or GIFs showcasing different parts of your website.
+
+## Roadmap
+
+Outline future features or improvements planned for your website.
+
+## Contributing
+
+If you'd like to contribute, please follow these [guidelines](CONTRIBUTING.md).
+
+## Acknowledgments
+
+- Mention any contributors, libraries, or resources you want to acknowledge.
+
+## Contact
+
+If you have any questions or suggestions, feel free to [contact me](mailto:your-email@example.com).
+
