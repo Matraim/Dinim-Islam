@@ -19,7 +19,7 @@ const ErmekAjy = () => {
           <VideoInfo>
             <VideoTitle>Устаз Эрмек Ажы Тынай уулу</VideoTitle>
             <VideoSubtitle>
-              ШАЙТАНДЫН АДАМДАРДЫН АРАСЫНДА 10 ДОСУ КИМ?
+              Шайтандаын адамдардын арасындагы 10 досу ?
             </VideoSubtitle>
           </VideoInfo>
         </VideoCard>
