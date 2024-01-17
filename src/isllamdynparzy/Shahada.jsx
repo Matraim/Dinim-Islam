@@ -2,36 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Namaz from '../assets/ImagesGreatPersonalities/33333.jpeg';
 
-const Container = styled.div`
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-`;
-
-const Heading = styled.h2`
-  font-size: 1.5em;
-  margin-bottom: 2rem;
-`;
-
-const ArabicText = styled.h2`
-  font-size: 1.2em;
-`;
-
-const Image = styled.img`
-  width: 100%;
-  max-width: auto;
-  height: auto;
-  border-radius: 8px;
-  padding: 2rem;
-`;
-
-const Paragraph = styled.p`
-  font-size: 1em;
-  line-height: 1.6;
-  margin-top: 2rem;
-`;
-
 const Shahada = () => {
   return (
     <Container>
@@ -73,3 +43,33 @@ const Shahada = () => {
 };
 
 export default Shahada;
+
+const Container = styled.div`
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+`;
+
+const Heading = styled.h2`
+  font-size: 1.5em;
+  margin-bottom: 2rem;
+`;
+
+const ArabicText = styled.h2`
+  font-size: 1.2em;
+`;
+
+const Image = styled.img`
+  width: 100%;
+  max-width: auto;
+  height: auto;
+  border-radius: 8px;
+  padding: 2rem;
+`;
+
+const Paragraph = styled.p`
+  font-size: 1em;
+  line-height: 1.6;
+  margin-top: 2rem;
+`;
