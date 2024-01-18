@@ -7,7 +7,6 @@ const MainLayout = () => {
   return (
     <div>
       <Header />
-
       <BackForwardButtons />
       <Outlet />
     </div>

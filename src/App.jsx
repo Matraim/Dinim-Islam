@@ -79,11 +79,11 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/info" element={<History />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/namaz" element={<Namaz />} />
-          <Route path="/shahada" element={<Shahada />} />
-          <Route path="/orozo" element={<Orozo />} />
-          <Route path="/zeket" element={<Zeket />} />
-          <Route path="/ajylyk" element={<Ajylyk />} />
+          <Route path="/намаз" element={<Namaz />} />
+          <Route path="/шахада" element={<Shahada />} />
+          <Route path="/орозо" element={<Orozo />} />
+          <Route path="/зекет" element={<Zeket />} />
+          <Route path="/ажылык" element={<Ajylyk />} />
           <Route path="/abubakr" element={<AbuBakr />} />
           <Route path="/umaribnhattab" element={<UmarIbnAlHattab />} />
           <Route path="/usmanibnaffan" element={<UsmanIbnAffan />}></Route>
