@@ -52,6 +52,8 @@ const Home = () => {
   );
 };
 
+export default Home;
+
 const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
@@ -92,5 +94,3 @@ const Image = styled.img`
 const StyledLink = styled(Link)`
   text-decoration: none;
 `;
-
-export default Home;
