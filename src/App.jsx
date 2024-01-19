@@ -10,7 +10,6 @@ import { auth } from './firebase';
 import { toast } from 'react-toastify';
 import { actionsAuth, selectorAuth } from './redux/slices/auth';
 import About from './components/About';
-import Contact from './components/Contact';
 import History from './components/History';
 import './style/App.css';
 import './style/Responsive.css';
@@ -35,6 +34,7 @@ import MaksatAjy from './ustazdar/MaksatAjy';
 import ChubakAjy from './ustazdar/ChubakAjy';
 import Abdushukurajy from './ustazdar/Abdushukurajy';
 import ErmekAjy from './ustazdar/ErmekAjy';
+import Oku from './components/Oku';
 
 function App() {
   const dispatch = useDispatch();
@@ -76,7 +76,7 @@ function App() {
           <Route index path="/quiz" element={<Quiz />} />
           <Route path="/admin" element={<AdminPanel />} />
           <Route path="/About" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/oku" element={<Oku />} />
           <Route path="/info" element={<History />} />
           <Route path="/home" element={<Home />} />
           <Route path="/намаз" element={<Namaz />} />

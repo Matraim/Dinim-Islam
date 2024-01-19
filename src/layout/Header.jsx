@@ -35,8 +35,8 @@ export default function Header() {
     navigate('/About');
   };
 
-  const handleContact = () => {
-    navigate('/contact');
+  const handleOku = () => {
+    navigate('/oku');
   };
 
   const handleHistory = () => {
@@ -52,7 +52,7 @@ export default function Header() {
   };
 
   const HandleNamaz = () => {
-    navigate('/namaz');
+    navigate('/намаз');
   };
 
   return (
@@ -81,7 +81,7 @@ export default function Header() {
               <Button color="inherit" onClick={HandleNamaz}>
                 Намаз
               </Button>
-              <Button color="inherit" onClick={handleContact}>
+              <Button color="inherit" onClick={handleOku}>
                 Окуялар
               </Button>
               <Button color="inherit" onClick={handleAboutUs}>
