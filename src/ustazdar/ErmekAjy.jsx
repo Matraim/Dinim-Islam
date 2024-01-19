@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const ErmekAjy = () => {
   return (
-    <div>
+    <Container>
       <BannerText>Устаз Эрмек Ажы Тынай уулу</BannerText>
       <VideosRow>
         <VideoCard>
@@ -42,12 +42,19 @@ const ErmekAjy = () => {
           </VideoInfo>
         </VideoCard>
         <VideoCard>
-          МУСУЛМАН АДАМ СӨЗСҮЗ ИЛИМДҮҮ БОЛУШУ КЕРЕК! ТУУГАНЫМ ЖАШООДОН АРТТА
-          КАЛБА!
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/dIMX858Cfk4?si=4HjNlVCjZJBdyvZ4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
           <VideoInfo>
             <VideoTitle>Устаз Эрмек Ажы Тынай уулу</VideoTitle>
             <VideoSubtitle>
-              ИЙГИЛИККЕ ЖЕТҮҮНҮ КААЛАСАҢ АНДА УШУЛ НЕРСЕНИ КЫЛ!
+              Шайтандаын адамдардын арасындагы 10 досу ?
             </VideoSubtitle>
           </VideoInfo>
         </VideoCard>
@@ -137,11 +144,16 @@ const ErmekAjy = () => {
           </VideoInfo>
         </VideoCard>
       </VideosRow>
-    </div>
+    </Container>
   );
 };
 
 export default ErmekAjy;
+
+const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+`;
 
 const VideosRow = styled.div`
   display: flex;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const MaksatAjy = () => {
   return (
-    <div>
+    <Container>
       <BannerText>Устаз Максатбек Ажы Токтомушев</BannerText>
       <VideosRow>
         <VideoCard>
@@ -128,11 +128,16 @@ const MaksatAjy = () => {
           </VideoInfo>
         </VideoCard>
       </VideosRow>
-    </div>
+    </Container>
   );
 };
 
 export default MaksatAjy;
+
+const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+`;
 
 const VideosRow = styled.div`
   display: flex;

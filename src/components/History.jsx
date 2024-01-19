@@ -4,10 +4,11 @@ import styled from 'styled-components';
 import historicalFigures from '../data/historicalFigure';
 import Bismillah from '../data/islam';
 import Ustazdar from '../data/ustazdar';
+import { Container } from '@mui/material';
 
 const History = () => {
   return (
-    <div>
+    <Container>
       <StyleHeaderText>
         <h2>Бейиш менен сүйүнчүлөнгөн 10 Сахаба.</h2>
         <br />
@@ -104,7 +105,7 @@ const History = () => {
           dolor labore maxime ad quas quis consequatur est cupiditate rerum. Ut.
         </CardContainerr>
       </div>
-    </div>
+    </Container>
   );
 };
 
@@ -136,6 +137,7 @@ const CardContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
 `;
+
 const CardContainerr = styled.div`
   display: flex;
   max-width: 1200px;
