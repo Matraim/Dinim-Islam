@@ -3,21 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import Banner from '../assets/ImagesGreatPersonalities/33333.jpeg';
-import bannercard1 from '../assets/ImagesGreatPersonalities/33333.jpeg';
-import bannercard2 from '../assets/ImagesGreatPersonalities/33333.jpeg';
-import bannercard3 from '../assets/ImagesGreatPersonalities/33333.jpeg';
-import bannercard4 from '../assets/ImagesGreatPersonalities/33333.jpeg';
-import bannercard5 from '../assets/ImagesGreatPersonalities/33333.jpeg';
-
-const images = [
-  bannercard1,
-  bannercard2,
-  bannercard3,
-  bannercard4,
-  bannercard5,
-];
-
-const listData = ['Shahada', 'Namaz', 'Orozo', 'Zeket', 'Ajylyk'];
+import { images, listData } from '../data/img';
 
 const Home = () => {
   return (
@@ -66,6 +52,8 @@ const Home = () => {
   );
 };
 
+export default Home;
+
 const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
@@ -106,5 +94,3 @@ const Image = styled.img`
 const StyledLink = styled(Link)`
   text-decoration: none;
 `;
-
-export default Home;

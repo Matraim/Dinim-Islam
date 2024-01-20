@@ -10,7 +10,6 @@ import { auth } from './firebase';
 import { toast } from 'react-toastify';
 import { actionsAuth, selectorAuth } from './redux/slices/auth';
 import About from './components/About';
-import Contact from './components/Contact';
 import History from './components/History';
 import './style/App.css';
 import './style/Responsive.css';
@@ -35,6 +34,7 @@ import MaksatAjy from './ustazdar/MaksatAjy';
 import ChubakAjy from './ustazdar/ChubakAjy';
 import Abdushukurajy from './ustazdar/Abdushukurajy';
 import ErmekAjy from './ustazdar/ErmekAjy';
+import Oku from './components/Oku';
 
 function App() {
   const dispatch = useDispatch();
@@ -76,14 +76,14 @@ function App() {
           <Route index path="/quiz" element={<Quiz />} />
           <Route path="/admin" element={<AdminPanel />} />
           <Route path="/About" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/oku" element={<Oku />} />
           <Route path="/info" element={<History />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/namaz" element={<Namaz />} />
-          <Route path="/shahada" element={<Shahada />} />
-          <Route path="/orozo" element={<Orozo />} />
-          <Route path="/zeket" element={<Zeket />} />
-          <Route path="/ajylyk" element={<Ajylyk />} />
+          <Route path="/намаз" element={<Namaz />} />
+          <Route path="/шахада" element={<Shahada />} />
+          <Route path="/орозо" element={<Orozo />} />
+          <Route path="/зекет" element={<Zeket />} />
+          <Route path="/ажылык" element={<Ajylyk />} />
           <Route path="/abubakr" element={<AbuBakr />} />
           <Route path="/umaribnhattab" element={<UmarIbnAlHattab />} />
           <Route path="/usmanibnaffan" element={<UsmanIbnAffan />}></Route>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Abdushukurajy = () => {
   return (
-    <div>
+    <Container>
       <BannerText>Шейх Абдишүкүр Ажы Нарматов </BannerText>
       <VideosRow>
         <VideoCard>
@@ -139,11 +139,16 @@ const Abdushukurajy = () => {
           </VideoInfo>
         </VideoCard>
       </VideosRow>
-    </div>
+    </Container>
   );
 };
 
 export default Abdushukurajy;
+
+const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+`;
 
 const BannerText = styled.div`
   text-align: center;

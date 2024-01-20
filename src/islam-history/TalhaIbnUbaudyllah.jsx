@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import TalhaRaimg from '../assets/images/талхара.jpeg';
+import TalhaRaimg from '../assets/images/talhara.jpeg';
 
 const TalhaIbnUbaudyllah = () => {
   return (

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const ChubakAjy = () => {
   return (
-    <div>
+    <Container>
       <BannerText>Шейх Чубак Ажы Жалилов </BannerText>
       <VideosRow>
         <VideoCard>
@@ -127,11 +127,16 @@ const ChubakAjy = () => {
           </VideoInfo>
         </VideoCard>
       </VideosRow>
-    </div>
+    </Container>
   );
 };
 
 export default ChubakAjy;
+
+const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+`;
 
 const BannerText = styled.div`
   text-align: center;

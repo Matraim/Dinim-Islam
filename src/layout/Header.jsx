@@ -3,7 +3,6 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import MosqueIcon from '@mui/icons-material/Mosque';
 import { signOut } from 'firebase/auth';
@@ -36,8 +35,8 @@ export default function Header() {
     navigate('/About');
   };
 
-  const handleContact = () => {
-    navigate('/contact');
+  const handleOku = () => {
+    navigate('/oku');
   };
 
   const handleHistory = () => {
@@ -53,41 +52,40 @@ export default function Header() {
   };
 
   const HandleNamaz = () => {
-    navigate('/namaz');
+    navigate('/намаз');
   };
 
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
+          <Button
+            startIcon={<MosqueIcon />}
+            variant="contained"
+            endIcon={<MosqueIcon />}
+            onClick={HandleHome}
           >
-            <MosqueIcon onClick={HandleHome} />
-          </IconButton>
-
+            Башкы бет
+          </Button>
           <Box sx={{ flexGrow: 1 }} />
 
           {isLoggedIn && (
             <>
               <Button color="inherit" onClick={HandleQuiz}>
-                Test
+                Тест
               </Button>
               <Button color="inherit" onClick={handleHistory}>
-                History
+                Тарых
+              </Button>
+
+              <Button color="inherit" onClick={HandleNamaz}>
+                Намаз
+              </Button>
+              <Button color="inherit" onClick={handleOku}>
+                Окуялар
               </Button>
               <Button color="inherit" onClick={handleAboutUs}>
-                About
-              </Button>
-              <Button color="inherit" onClick={HandleNamaz}>
-                Namaz
-              </Button>
-              <Button color="inherit" onClick={handleContact}>
-                Contact
+                Биз жөнүндө
               </Button>
               <Button color="inherit" onClick={handleLogout}>
                 <MeetingRoomIcon />
