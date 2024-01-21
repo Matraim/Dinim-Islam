@@ -85,6 +85,7 @@ function App() {
           <Route path="/зекет" element={<Zeket />} />
           <Route path="/ажылык" element={<Ajylyk />} />
           <Route path="/abubakr" element={<AbuBakr />} />
+          <Route path="/adminPanel" element={<AdminPanel />} />
           <Route path="/umaribnhattab" element={<UmarIbnAlHattab />} />
           <Route path="/usmanibnaffan" element={<UsmanIbnAffan />}></Route>
           <Route path="/aliibnabutalib" element={<AliIbnAbuTalib />}></Route>

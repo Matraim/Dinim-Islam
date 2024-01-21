@@ -1,31 +1,23 @@
+import { Card } from '@mui/material';
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { AllahsName } from '../data/namesAllah';
 
 const AdminPanel = () => {
-  const userData = JSON.parse(localStorage.getItem('userData')) || [];
-
   return (
     <div>
       <h2>Админская панель</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>City</th>
-            <th>Email</th>
-            <th>Gender</th>
-          </tr>
-        </thead>
-        <tbody>
-          {userData.map((user, index) => (
-            <tr key={index}>
-              <td>{user.name}</td>
-              <td>{user.city}</td>
-              <td>{user.email}</td>
-              <td>{user.gender}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {AllahsName.map((figure, index) => (
+        <Card key={index}>
+          <Link to={figure.path}>
+            <img src={figure.image} alt={figure.name} />
+            <h5>{figure.name} </h5>
+          </Link>
+
+          <p>{figure.text}</p>
+          <p>{figure.status}</p>
+        </Card>
+      ))}
     </div>
   );
 };
