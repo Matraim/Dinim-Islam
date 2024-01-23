@@ -165,14 +165,11 @@ const VideoCard = styled.div`
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
-
   &:hover {
     transform: scale(1.02);
   }
 
   iframe {
-    width: 100%;
-    height: 250px;
     border: none;
   }
 `;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import historicalFigures from '../data/historicalFigure';
@@ -122,6 +121,8 @@ const StyleHeaderTextStatus = styled.div`
 
 const Sallallahualeihivvassallam = styled.span`
   color: green;
+  font-size: 3rem;
+  cursor: pointer;
 `;
 
 const StyleCardSmallText = styled.div`
