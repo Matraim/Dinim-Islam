@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { styled } from '@mui/material';
 
 const BackForwardButtons = () => {
   const navigate = useNavigate();
@@ -18,36 +19,31 @@ const BackForwardButtons = () => {
 
   return (
     <div>
-      <Button
+      <StyleButton
         color="primary"
         onClick={handleGoBack}
         startIcon={<ArrowBackIcon />}
-        style={{
-          position: 'fixed',
-          top: '5rem',
-
-          zIndex: 1000,
-        }}
-      ></Button>
+      ></StyleButton>
 
       {location.action === 'PUSH' && (
-        <Button
+        <StyleButton
           variant="outlined"
           color="primary"
           onClick={handleGoForward}
           startIcon={<ArrowForwardIcon />}
-          style={{
-            position: 'fixed',
-            top: '5rem',
-            left: '96px',
-            zIndex: 1000,
-          }}
         >
           Вперёд
-        </Button>
+        </StyleButton>
       )}
     </div>
   );
 };
 
 export default BackForwardButtons;
+
+const StyleButton = styled(Button)(() => ({
+  position: 'fixed',
+  top: '5rem',
+  left: '96px',
+  zIndex: 1000,
+}));

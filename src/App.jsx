@@ -35,6 +35,12 @@ import ChubakAjy from './ustazdar/ChubakAjy';
 import Abdushukurajy from './ustazdar/Abdushukurajy';
 import ErmekAjy from './ustazdar/ErmekAjy';
 import Oku from './components/Oku';
+import Bagymdat from './namazdar/Bagymdat.jsx';
+import Beshim from './namazdar/Beshim';
+import Asr from './namazdar/Asr';
+import Sham from './namazdar/Sham';
+import Kuptan from './namazdar/Kuptan';
+import Jannat from './namazdar/Jannat.jsx';
 
 function App() {
   const dispatch = useDispatch();
@@ -100,6 +106,12 @@ function App() {
           <Route path="/chubakAjy" element={<ChubakAjy />}></Route>
           <Route path="/abdushukurajy" element={<Abdushukurajy />}></Route>
           <Route path="/ermekajy" element={<ErmekAjy />}></Route>
+          <Route path="/bagymdat" element={<Bagymdat />}></Route>
+          <Route path="/beshim" element={<Beshim />}></Route>
+          <Route path="/asr" element={<Asr />}></Route>
+          <Route path="/sham" element={<Sham />}></Route>
+          <Route path="/kuptan" element={<Kuptan />}></Route>
+          <Route path="/jannat" element={<Jannat />}></Route>
 
           <Route
             path="/talhaubnubaidullah"

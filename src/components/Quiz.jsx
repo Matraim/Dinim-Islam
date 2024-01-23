@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import {
   Button,
@@ -9,7 +8,6 @@ import {
   TableHead,
   TableRow,
   Paper,
-  Grid,
 } from '@mui/material';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import { ToastContainer, toast } from 'react-toastify';
@@ -36,9 +34,9 @@ const Quiz = () => {
   const [showFinalResults, setShowFinalResults] = useState(false);
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [showAllAnswers, setShowAllAnswers] = useState(false);
+  const [setShowAllAnswers] = useState(false);
   const [isAnswersVisible, setIsAnswersVisible] = useState(false);
-  const [showConfetti, setShowConfetti] = useState(false);
+  const [setShowConfetti] = useState(false);
   const { width, height } = useWindowSize();
 
   useEffect(() => {
@@ -48,7 +46,7 @@ const Quiz = () => {
         setShowConfetti(false);
       }, 1000);
     }
-  }, [score]);
+  }, [score, setShowConfetti]);
 
   const optionClicked = (isCorrect, optionIndex) => {
     if (!isCorrect) {

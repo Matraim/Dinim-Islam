@@ -1,56 +1,56 @@
 import React from 'react';
 import { oku } from '../data/oku';
 import styled from 'styled-components';
-import { Card } from '@mui/material';
+import { Card, Container } from '@mui/material';
 import { Link } from 'react-router-dom';
+import Img from '../assets/images/Abdurakhmanibnaufimg.png';
 
 const Oku = () => {
   return (
-    <div>
-      <CardContainer>
+    <StyleContainer>
+      <Content>
         {oku.map((figure, index) => (
-          <Card key={index}>
+          <StyledCard key={index}>
             <Link to={figure.path}>
-              <CardImage src={figure.image} alt={figure.name} />
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <CardImage src={Img} alt="" />
+              </div>
               <CardTitle>{figure.name}</CardTitle>
             </Link>
             <StyleCardSmallText>{figure.text}</StyleCardSmallText>
             <StyleHeaderTextStatus>{figure.status}</StyleHeaderTextStatus>
-          </Card>
+          </StyledCard>
         ))}
-      </CardContainer>
-    </div>
+      </Content>
+    </StyleContainer>
   );
 };
 
-export default Oku;
+const Content = styled.div`
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+`;
+
+const StyledCard = styled(Card)`
+  flex: 1 1 calc(33.333% - 20px);
+`;
 
 const StyleCardSmallText = styled.div`
   text-align: center;
   padding: 0.1rem;
 `;
 
-const CardContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-`;
+const StyleContainer = styled(Container)(() => ({
+  margin: 'auto',
+  paddingBottom: '2rem',
+}));
 
-const CardImage = styled.img`
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-
-  @media (min-width: 370px) {
-    flex: 1 1 calc(1% - 20px);
-  }
-  @media (min-width: 370px) {
-    flex: 1 1 calc(33% - 20px);
-  }
-`;
+const CardImage = styled('img')(() => ({
+  backgroundSize: 'contain',
+  width: '5rem',
+}));
 
 const CardTitle = styled.div`
   text-align: center;
@@ -61,3 +61,5 @@ const StyleHeaderTextStatus = styled.div`
   text-align: center;
   padding: 0rem;
 `;
+
+export default Oku;
