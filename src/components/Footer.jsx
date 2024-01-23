@@ -18,9 +18,8 @@ const StyleContainer = styled.footer`
   background-color: #1976d2;
   color: #fff;
   text-align: center;
-  margin: 1rem;
+  width: 100%;
   padding: 1rem;
-  border-radius: 0.3rem;
 `;
 
 const StyleContent = styled.div`
