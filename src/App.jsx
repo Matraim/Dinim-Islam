@@ -35,12 +35,12 @@ import ChubakAjy from './ustazdar/ChubakAjy';
 import Abdushukurajy from './ustazdar/Abdushukurajy';
 import ErmekAjy from './ustazdar/ErmekAjy';
 import Oku from './components/Oku';
-import Bagymdat from './namazdar/Bagymdat.jsx';
+import Bagymdat from './namazdar/Bagymdat';
 import Beshim from './namazdar/Beshim';
 import Asr from './namazdar/Asr';
 import Sham from './namazdar/Sham';
 import Kuptan from './namazdar/Kuptan';
-import Jannat from './namazdar/Jannat.jsx';
+import Jannat from './namazdar/Jannat';
 
 function App() {
   const dispatch = useDispatch();
