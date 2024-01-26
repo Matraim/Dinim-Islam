@@ -16,6 +16,7 @@ import Confetti from 'react-confetti';
 import useWindowSize from 'react-use/lib/useWindowSize';
 import questions from '../data/question.js';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import '../style/App.css';
 
 const confettiConfig = {
   angle: 1,
