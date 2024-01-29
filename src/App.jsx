@@ -95,10 +95,6 @@ function App() {
           <Route path="/umaribnhattab" element={<UmarIbnAlHattab />} />
           <Route path="/usmanibnaffan" element={<UsmanIbnAffan />}></Route>
           <Route path="/aliibnabutalib" element={<AliIbnAbuTalib />}></Route>
-          <Route
-            path="/abdurakhmmanibnauf"
-            element={<AbdurrakhamibnAuf />}
-          ></Route>
           <Route path="/abuubaidah" element={<AbuUbaidah />}></Route>
           <Route path="/saadibnvakkas" element={<SaadIbnAbuVakkas />}></Route>
           <Route path="/saidibnzaid" element={<SaidIbnZaid />}></Route>
@@ -112,7 +108,10 @@ function App() {
           <Route path="/sham" element={<Sham />}></Route>
           <Route path="/kuptan" element={<Kuptan />}></Route>
           <Route path="/jannat" element={<Jannat />}></Route>
-
+          <Route
+            path="/abdurakhmmanibnauf"
+            element={<AbdurrakhamibnAuf />}
+          ></Route>
           <Route
             path="/talhaubnubaidullah"
             element={<TalhaIbnUbaidullah />}
