@@ -41,6 +41,11 @@ import Asr from './namazdar/Asr';
 import Sham from './namazdar/Sham';
 import Kuptan from './namazdar/Kuptan';
 import Jannat from './namazdar/Jannat';
+import IslamLegends from './components/IslamLegends';
+import Khadis from './components/Khadis';
+import Quran from './components/Quran';
+import Zikr from './components/Zikr';
+import NameAllah from './components/NameAllah';
 
 function App() {
   const dispatch = useDispatch();
@@ -108,6 +113,12 @@ function App() {
           <Route path="/sham" element={<Sham />}></Route>
           <Route path="/kuptan" element={<Kuptan />}></Route>
           <Route path="/jannat" element={<Jannat />}></Route>
+          <Route path="/islamlegends" element={<IslamLegends />}></Route>
+          <Route path="/khadis" element={<Khadis />}></Route>
+          <Route path="/quran" element={<Quran />}></Route>
+          <Route path="/zikr" element={<Zikr />}></Route>
+          <Route path="/nameallah" element={<NameAllah />}></Route>
+
           <Route
             path="/abdurakhmmanibnauf"
             element={<AbdurrakhamibnAuf />}

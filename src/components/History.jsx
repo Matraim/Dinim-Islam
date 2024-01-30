@@ -162,8 +162,9 @@ const IslamtextStyle = styled.h2`
 
 const CardImage = styled.img`
   width: 100%;
-  height: 150px;
+  height: 200px;
   object-fit: cover;
+  background-size: contain;
 
   @media (min-width: 370px) {
     flex: 1 1 calc(1% - 20px);
