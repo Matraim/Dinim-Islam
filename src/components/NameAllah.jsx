@@ -54,7 +54,6 @@ const StyleBannerText = styled('div')(() => ({
 }));
 
 const StyleContainer = styled(Container)(() => ({
-  backgroundColor: '#fff5d9',
   borderRadius: '5px',
   padding: '2rem',
 }));
