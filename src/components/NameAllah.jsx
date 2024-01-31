@@ -24,7 +24,7 @@ const NameAllah = () => {
               <TableCell>Номер</TableCell>
               <TableCell>Аллахтын 99 сыпаты</TableCell>
               <TableCell>Транискрипция Аллаха</TableCell>
-              <TableCell>Значение Имя Аллаха</TableCell>
+              <TableCell>Мааниси</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
