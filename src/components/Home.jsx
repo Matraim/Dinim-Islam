@@ -2,15 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
-import Banner from '../assets/ImagesGreatPersonalities/33333.jpeg';
+// import Banner from '../assets/ImagesGreatPersonalities/33333.jpeg';
 import { images, listData } from '../data/img';
+import Sliders from '../components/Sliders';
 
 const Home = () => {
   return (
     <Container>
       <Section>
         <Title>Диним Ислам</Title>
-        <Image src={Banner} alt="img-lion-islamic" />
+        {/* <Image src={Banner} alt="img-lion-islamic" /> */}
+        <Sliders />
       </Section>
       <Section>
         <Title>Исламдын 5 парзы</Title>
@@ -87,12 +89,12 @@ const ListItem = styled.li`
   margin-bottom: 20px;
 `;
 
-const Image = styled.img`
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 0.5rem;
-`;
+// const Image = styled.img`
+//   width: 100%;
+//   height: auto;
+//   object-fit: cover;
+//   border-radius: 0.5rem;
+// `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
