@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
-// import Banner from '../assets/ImagesGreatPersonalities/33333.jpeg';
 import { images, listData } from '../data/img';
 import Sliders from '../components/Sliders';
 
@@ -11,7 +10,6 @@ const Home = () => {
     <Container>
       <Section>
         <Title>Диним Ислам</Title>
-        {/* <Image src={Banner} alt="img-lion-islamic" /> */}
         <Sliders />
       </Section>
       <Section>

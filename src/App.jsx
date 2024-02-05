@@ -46,6 +46,12 @@ import Khadis from './components/Khadis';
 import Quran from './components/Quran';
 import Zikr from './components/Zikr';
 import NameAllah from './components/NameAllah';
+import Jaratkandybil from './hikayalar/Jaratkandybil';
+import Uzunomur from './hikayalar/Uzunomur';
+import Akyret from './hikayalar/Akyret';
+import BoshJurok from './hikayalar/BoshJurok';
+import ImamAzzam from './hikayalar/ImamAzzam';
+import BismillahKuchu from './hikayalar/BismillahKuchu';
 
 function App() {
   const dispatch = useDispatch();
@@ -118,6 +124,12 @@ function App() {
           <Route path="/quran" element={<Quran />}></Route>
           <Route path="/zikr" element={<Zikr />}></Route>
           <Route path="/nameallah" element={<NameAllah />}></Route>
+          <Route path="/jaratkandybil" element={<Jaratkandybil />}></Route>
+          <Route path="/uzunomur" element={<Uzunomur />}></Route>
+          <Route path="/akyret" element={<Akyret />}></Route>
+          <Route path="/boshjurok" element={<BoshJurok />}></Route>
+          <Route path="/imamazzam" element={<ImamAzzam />}></Route>
+          <Route path="/bismillahkuchu" element={<BismillahKuchu />}></Route>
 
           <Route
             path="/abdurakhmmanibnauf"

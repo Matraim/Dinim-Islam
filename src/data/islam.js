@@ -1,8 +1,4 @@
 import imgQuran from '../assets/images/imgquran.jpeg';
-// import UluuInsandar from '../assets/images/';
-// import juzhadis from '../assets/images/';
-// import quranimg from '../assets/images/imgquran';
-// import zikr from '../assets/images/dua';
 
 const Bismillah = [
   {
