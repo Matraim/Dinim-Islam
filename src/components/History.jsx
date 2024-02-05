@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import historicalFigures from '../data/historicalFigure';
 import Bismillah from '../data/islam';
 import Ustazdar from '../data/ustazdar';
-import { Container } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 
 const History = () => {
   return (
@@ -51,28 +51,42 @@ const History = () => {
                 <CardImage src={figure.image} alt={figure.name} />
                 <CardTitle>{figure.name} </CardTitle>
               </Link>
-
               <StyleCardSmallText>{figure.text}</StyleCardSmallText>
               <StyleCardSmallText>{figure.status}</StyleCardSmallText>
             </Card>
           ))}
         </CardContainer>
-        <CardContainerr>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni quod
-          doloremque praesentium nulla est a tempora voluptatibus eaque
-          aspernatur. Dicta, officia molestiae veritatis illo at asperiores
-          facere ad reiciendis quo? Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Laboriosam minima, placeat soluta quisquam voluptate
-          dicta aut voluptas dolorem molestiae dolor labore maxime ad quas quis
-          consequatur est cupiditate rerum. Ut. Lorem ipsum, dolor sit amet
-          consectetur adipisicing elit. Magni quod doloremque praesentium nulla
-          est a tempora voluptatibus eaque aspernatur. Dicta, officia molestiae
-          veritatis illo at asperiores facere ad reiciendis quo? Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Laboriosam minima,
-          placeat soluta quisquam voluptate dicta aut voluptas dolorem molestiae
-          dolor labore maxime ad quas quis consequatur est cupiditate rerum. Ut.
-        </CardContainerr>
       </div>
+      <br />
+      <br />
+      <StyleTextIslam>
+        <br />
+        <Typography>
+          *...و رضيت لكم الإسلام دينا...* <br /> «Дин катары силерге Ислам
+          (динин) ыраа көрдүм»
+          <br /> (Маида, 3).
+        </Typography>
+        <br />
+        <br />
+        <Typography>
+          *إن الدين عند الله الإسلام...* <br /> «Чындыгында, Аллахтын алдында
+          кабыл болуучу дин бул – Ислам...» <br />
+          <br /> (Алу Имран, 19).
+        </Typography>
+        <br />
+        <br />
+        <Typography>
+          *إنا نحن نزلنا الذكر و إنا له لحافظون* <br /> «Чындыгында, эскертмени
+          (Куранды) Биз түшүрдүк. Эми аны Өзүбүз сактайбыз». <br />
+          <br /> (Хижр, 9)
+        </Typography>
+        <br />
+        <br />
+        <p>
+          Ислам дини эч бир кемчиликсиз, толук дин. Адам баласынын татыктуу
+          жашоо сүрүүсүнө 100 пайыз топ келет.
+        </p>
+      </StyleTextIslam>
       <div>
         <IslamtextStyle>Биздин Устаздар</IslamtextStyle>
         <CardContainer>
@@ -89,19 +103,9 @@ const History = () => {
           ))}
         </CardContainer>
         <CardContainerr>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni quod
-          doloremque praesentium nulla est a tempora voluptatibus eaque
-          aspernatur. Dicta, officia molestiae veritatis illo at asperiores
-          facere ad reiciendis quo? Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Laboriosam minima, placeat soluta quisquam voluptate
-          dicta aut voluptas dolorem molestiae dolor labore maxime ad quas quis
-          consequatur est cupiditate rerum. Ut. Lorem ipsum, dolor sit amet
-          consectetur adipisicing elit. Magni quod doloremque praesentium nulla
-          est a tempora voluptatibus eaque aspernatur. Dicta, officia molestiae
-          veritatis illo at asperiores facere ad reiciendis quo? Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Laboriosam minima,
-          placeat soluta quisquam voluptate dicta aut voluptas dolorem molestiae
-          dolor labore maxime ad quas quis consequatur est cupiditate rerum. Ut.
+          Аллахтын элчиси ( ﷺ ) айтты: Аалымдар менин мурасчыларым, себеби
+          адамдарды туура жолго салып жаман жолдон кайтарат. Ошондой болгондон
+          кийин аалымдарды урматтап аларды сыйлоо важип болот.
         </CardContainerr>
       </div>
     </Container>
@@ -109,6 +113,14 @@ const History = () => {
 };
 
 export default History;
+
+const StyleTextIslam = styled('div')(() => ({
+  textAlign: 'center',
+  backgroundColor: '#00000086',
+  color: '#fff',
+  borderRadius: '10px',
+  padding: '2rem',
+}));
 
 const StyleHeaderText = styled.div`
   text-align: center;
