@@ -1,9 +1,10 @@
 import { Container, Typography } from '@mui/material';
 import React from 'react';
+import styled from 'styled-components';
 
 const Jannat = () => {
   return (
-    <Container>
+    <StyleContainer>
       <h2>Намаз Аллах Тааланын буйругу</h2>
       <br />
       <Typography>
@@ -22,8 +23,12 @@ const Jannat = () => {
         “Намаз окугула, зекет бергиле жана рүкү кылуучулар менен рүкү кылгыла”
         (Бакара 43)
       </Typography>
-    </Container>
+    </StyleContainer>
   );
 };
 
 export default Jannat;
+
+const StyleContainer = styled(Container)({
+  textAlign: 'center',
+});

@@ -1,13 +1,14 @@
 import { Container, Typography } from '@mui/material';
 import React from 'react';
+import styled from 'styled-components';
 
 const Jaratkandybil = () => {
   return (
     <Container>
-      <div>
+      <StyledBannerText>
         <h2>Кожоюнун ким билбейт</h2>
-      </div>
-      <Typography>
+      </StyledBannerText>
+      <StyledTypography>
         Ислам аалымдарынын улууларынан болгон Абдуллах бин Мубарек кой жайып
         жүргөн жаш баланы көрөт. Ага боору ооруйт. "Бечара бала!.. Кичине болуп
         туруп чабандык кылып жүрөт. Чоңойгон кезде Аллаху тааланын марифатына
@@ -42,9 +43,20 @@ const Jaratkandybil = () => {
         экендигиң жүзүңөн белгилүү болуп турат. Эгер илимди Аллах ыраазылыгы
         үчүн үйрөнгөн болсоң адамдардан үмүт өтүүнү токтот! Жок, эгер дүнүйө
         үчүн үйрөнгөн болсоң Жаннатты каалоону көңүлүңөн чыгар.
-      </Typography>
+      </StyledTypography>
     </Container>
   );
 };
 
 export default Jaratkandybil;
+
+const StyledBannerText = styled('div')({
+  fontSize: '2rem',
+  textAlign: 'center',
+  padding: '1rem',
+});
+
+const StyledTypography = styled(Typography)({
+  lineHeight: '1.6',
+  textAlign: 'center',
+});

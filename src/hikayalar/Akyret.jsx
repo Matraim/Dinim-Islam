@@ -1,13 +1,13 @@
-import { Container, Typography } from '@mui/material';
 import React from 'react';
+import { Container, Typography, styled } from '@mui/material';
 
 const Akyret = () => {
   return (
     <Container>
-      <div>
+      <StyledBannerText>
         <h2>Кимди сүйсөң акыретте аны менен бирге болосуң</h2>
-      </div>
-      <Typography>
+      </StyledBannerText>
+      <StyledTypography>
         Дин улуктары менен бирге болуш үчүн аларды сүйүү жеткиликтүү. Бирок, эч
         бир ибадат кылбаган жана эч бир күнөөдөн сактанбаган адам улууларды эч
         качан сүйө албайт. Сүйгөн адам сүйүктүүсүнө баш ийет. Алар сыяктуу боло
@@ -22,9 +22,20 @@ const Akyret = () => {
         жерде бир сүйүнчүнү билдирет: "Эль меру меа мен эхаббе” Сен дейт,
         кайгырба, бул жерде кимди сүйсөң акыретте аны менен бирге болосуң.
         Демек, ким экендигибиз эмес кимди сүйгөндүгүбүз маанилүү.
-      </Typography>
+      </StyledTypography>
     </Container>
   );
 };
 
 export default Akyret;
+
+const StyledBannerText = styled('div')({
+  fontSize: '2rem',
+  textAlign: 'center',
+  padding: '1rem',
+});
+
+const StyledTypography = styled(Typography)({
+  lineHeight: '1.6',
+  textAlign: 'center',
+});

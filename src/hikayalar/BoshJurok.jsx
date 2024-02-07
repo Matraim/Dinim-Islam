@@ -1,13 +1,14 @@
 import { Container, Typography } from '@mui/material';
 import React from 'react';
+import styled from 'styled-components';
 
 const BoshJurok = () => {
   return (
     <Container>
-      <div>
+      <StyledBannerText>
         <h2>*Бош уйго ууру кирбейт*</h2>
-      </div>
-      <Typography>
+      </StyledBannerText>
+      <StyledTypography>
         Алланын элчиси (саллаллаху алейхи ва саллам) Каабада эле. Мусулмандар
         менен бирге бир жөөт киши дагы келди. Ал мезгилдерде Каабага жөөттөр
         менен бутпарастар дагы келишчү. Момундардан бир киши пайгамбарыбыздан
@@ -42,9 +43,20 @@ const BoshJurok = () => {
         эле сага аны эстеткен экен. Мен ансыз деле ушул максатта сага «Түнү бою
         намаз оку» деген элем. Таң атканга чейин шүгүр намазын да кошо окусаң
         кандай жакшы болмок. Бирок, сен акчаны тапканда намазды таштадың...
-      </Typography>
+      </StyledTypography>
     </Container>
   );
 };
 
 export default BoshJurok;
+
+const StyledBannerText = styled('div')({
+  fontSize: '2rem',
+  textAlign: 'center',
+  padding: '1rem',
+});
+
+const StyledTypography = styled(Typography)({
+  lineHeight: '1.6',
+  textAlign: 'center',
+});

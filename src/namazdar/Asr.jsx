@@ -1,9 +1,10 @@
 import { Container, Typography } from '@mui/material';
 import React from 'react';
+import styled from 'styled-components';
 
 const Asr = () => {
   return (
-    <Container>
+    <StyleContainer>
       <div>
         <h1>Аср намазынын окулушу</h1>
         <br />
@@ -36,8 +37,12 @@ const Asr = () => {
           бидат болуп саналат.
         </Typography>
       </div>
-    </Container>
+    </StyleContainer>
   );
 };
 
 export default Asr;
+
+const StyleContainer = styled(Container)({
+  textAlign: 'center',
+});

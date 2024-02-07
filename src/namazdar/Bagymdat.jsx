@@ -1,9 +1,10 @@
 import { Container } from '@mui/material';
 import React from 'react';
+import styled from 'styled-components';
 
 const Bagymdat = () => {
   return (
-    <Container>
+    <StyleContainer>
       <h1>Багымдат намазынын окулушу</h1>
       <br />
       <div>
@@ -57,8 +58,12 @@ const Bagymdat = () => {
           </div>
         </div>
       </div>
-    </Container>
+    </StyleContainer>
   );
 };
 
 export default Bagymdat;
+
+const StyleContainer = styled(Container)({
+  textAlign: 'center',
+});
