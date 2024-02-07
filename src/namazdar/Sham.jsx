@@ -1,9 +1,10 @@
 import { Container, Typography } from '@mui/material';
 import React from 'react';
+import styled from 'styled-components';
 
 const Sham = () => {
   return (
-    <Container>
+    <StyleContainer>
       <div>
         <h2>Шам намазынын окулушу</h2>
         <br />
@@ -55,8 +56,12 @@ const Sham = () => {
           </Typography>
         </div>
       </div>
-    </Container>
+    </StyleContainer>
   );
 };
 
 export default Sham;
+
+const StyleContainer = styled(Container)({
+  textAlign: 'center',
+});

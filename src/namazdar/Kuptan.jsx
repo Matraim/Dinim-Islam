@@ -1,9 +1,10 @@
 import { Container, Typography } from '@mui/material';
 import React from 'react';
+import styled from 'styled-components';
 
 const Kuptan = () => {
   return (
-    <Container>
+    <StyleContainer>
       <div>
         <h1>Куптан намазынын окулушу</h1>
         <br />
@@ -108,8 +109,12 @@ const Kuptan = () => {
           </Typography>
         </div>
       </div>
-    </Container>
+    </StyleContainer>
   );
 };
 
 export default Kuptan;
+
+const StyleContainer = styled(Container)({
+  textAlign: 'center',
+});

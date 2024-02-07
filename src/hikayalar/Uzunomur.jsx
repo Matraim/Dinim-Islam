@@ -1,13 +1,14 @@
 import { Container, Typography } from '@mui/material';
 import React from 'react';
+import styled from 'styled-components';
 
 const Uzunomur = () => {
   return (
     <Container>
-      <div>
+      <StyledBannerText>
         <h2>Алар там да салабы?</h2>
-      </div>
-      <Typography>
+      </StyledBannerText>
+      <StyledTypography>
         Нух алейхиссаламдын заманында адамдар узун өмүрлүү болушкан экен. 800 –
         1000 жылга чейин жашашчу экен. Бир аялдын баласы кайтыш болот. Аял аябай
         ыйлайт. Кошуна аялдардын бири ага деген экен: - Эмне мынчалык ыйлайсың,
@@ -19,9 +20,20 @@ const Uzunomur = () => {
         айтып жатасыңбы? - Албетте. - Ооо Кудай! Алар там да салабы? - Албетте,
         бир канчасын салат экен. Мен алардын ордунда болсом чатырымдын бир
         казыгын болсо да алмаштырмак эмесмин.
-      </Typography>
+      </StyledTypography>
     </Container>
   );
 };
 
 export default Uzunomur;
+
+const StyledBannerText = styled('div')({
+  fontSize: '2rem',
+  textAlign: 'center',
+  padding: '1rem',
+});
+
+const StyledTypography = styled(Typography)({
+  lineHeight: '1.6',
+  textAlign: 'center',
+});

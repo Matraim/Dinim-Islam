@@ -1,13 +1,14 @@
 import { Container, Typography } from '@mui/material';
 import React from 'react';
+import styled from 'styled-components';
 
 const BismillahKuchu = () => {
   return (
     <Container>
-      <div>
+      <StyledBannerText>
         <h2>Бисмиллах созунун устомдугу</h2>
-      </div>
-      <Typography>
+      </StyledBannerText>
+      <StyledTypography>
         ''Бисмиллах''созунун устомдугу Ибрахим Гулшани хазреттери бир куну
         шакирттери менен баарлашып олтурган эле. Шакирттеринин бири мындай деп
         сурады: -Устазым! Аллах та'аланын Ырайымдуулугу менен кабырдагы
@@ -20,9 +21,20 @@ const BismillahKuchu = () => {
         жаткан адамдын кичинекей баласы бар эле. Апасы ал баланы илим уйронууго
         жиберет. Бала''Бисмилаахир рохмаанир рохиим''созун уйронгондо, ошол
         создун урматына атасынын азабы токтоду.''
-      </Typography>
+      </StyledTypography>
     </Container>
   );
 };
 
 export default BismillahKuchu;
+
+const StyledBannerText = styled('div')({
+  fontSize: '2rem',
+  textAlign: 'center',
+  padding: '1rem',
+});
+
+const StyledTypography = styled(Typography)({
+  lineHeight: '1.6',
+  textAlign: 'center',
+});

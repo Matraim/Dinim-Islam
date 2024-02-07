@@ -1,13 +1,14 @@
 import { Container, Typography } from '@mui/material';
 import React from 'react';
+import styled from 'styled-components';
 
 const ImamAzzam = () => {
   return (
     <Container>
-      <div>
+      <StyledBannerText>
         <h2>Бир алма жана Имам Азамдын атасы</h2>
-      </div>
-      <Typography>
+      </StyledBannerText>
+      <StyledTypography>
         Шемседдин Сивасинин Менакых-и Имам Азам аттуу эмгегинде мындай жазылган:
         Имам Азамдын атасы Сабит (рахметуллахи алейх) кичине жашынан тарта
         ахлагы таза, такыбаа зат болгон. Жүзү абдан нурдуу болуп, диндарлыгы
@@ -42,9 +43,20 @@ const ImamAzzam = () => {
         жерлерге барган эмес. Бар эми адал жубайыңдын жанына бар, Аллаху таала
         мубарек жана бактылуу кылсын.» Мына ушул үйлөнүүдөн, б.а., ушундай
         эне-атадан Имам Азам Абу Ханифа дүнүйөгө келген.
-      </Typography>
+      </StyledTypography>
     </Container>
   );
 };
 
 export default ImamAzzam;
+
+const StyledBannerText = styled('div')({
+  fontSize: '2rem',
+  textAlign: 'center',
+  padding: '1rem',
+});
+
+const StyledTypography = styled(Typography)({
+  lineHeight: '1.6',
+  textAlign: 'center',
+});
