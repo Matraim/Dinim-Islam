@@ -41,6 +41,7 @@ import SaadIbnAbuVakkas from '../islam-history/AbuVakkass';
 import SaidIbnZaid from '../islam-history/SaidIbnZaid';
 import TalhaIbnUbaidullah from '../islam-history/TalhaIbnUbaudyllah';
 import ZubairIbnAvvam from '../islam-history/ZubairIbnAvvam';
+import MishariRashid from '../hafizder/MishariRashid';
 
 const MyRoutes = [
   { path: '/', element: <MainLayout /> },
@@ -86,6 +87,7 @@ const MyRoutes = [
   { path: '/saidibnzaid', element: <SaidIbnZaid /> },
   { path: '/talhaubnubaidullah', element: <TalhaIbnUbaidullah /> },
   { path: '/zubairibnavvam', element: <ZubairIbnAvvam /> },
+  { path: '/misharirashid', element: <MishariRashid /> },
 ];
 
 export { MyRoutes };

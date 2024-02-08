@@ -1,10 +1,11 @@
 import { Container, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
+import img from '../assets/images/100.png';
 
 const ImamAzzam = () => {
   return (
-    <Container>
+    <StyleContainer>
       <StyledBannerText>
         <h2>Бир алма жана Имам Азамдын атасы</h2>
       </StyledBannerText>
@@ -44,7 +45,7 @@ const ImamAzzam = () => {
         мубарек жана бактылуу кылсын.» Мына ушул үйлөнүүдөн, б.а., ушундай
         эне-атадан Имам Азам Абу Ханифа дүнүйөгө келген.
       </StyledTypography>
-    </Container>
+    </StyleContainer>
   );
 };
 
@@ -56,7 +57,16 @@ const StyledBannerText = styled('div')({
   padding: '1rem',
 });
 
+const StyleContainer = styled(Container)(() => ({
+  backgroundImage: `url(${img})`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  color: '#fff',
+}));
+
 const StyledTypography = styled(Typography)({
-  lineHeight: '1.6',
+  lineHeight: '3',
   textAlign: 'center',
+  wordSpacing: '3px',
+  letterSpacing: '1',
 });

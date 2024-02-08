@@ -7,6 +7,7 @@ const quranData = [
     nationality: 'Кувейт',
     position: 'Имам Кувейт,',
     imageUrl: Hafizimg,
+    path: '/misharirashid',
   },
   {
     id: 2,

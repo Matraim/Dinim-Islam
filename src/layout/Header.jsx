@@ -77,7 +77,6 @@ export default function Header() {
               <Button color="inherit" onClick={handleHistory}>
                 Тарых
               </Button>
-
               <Button color="inherit" onClick={HandleNamaz}>
                 Намаз
               </Button>
