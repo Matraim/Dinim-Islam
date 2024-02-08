@@ -1,6 +1,7 @@
 import { Container } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
+import Bagumdatimg from '../assets/images/abuvakkasra.jpeg';
 
 const Bagymdat = () => {
   return (
@@ -16,6 +17,7 @@ const Bagymdat = () => {
             1. Рекет - Ниет кылынат. - Такбир айтылат. - Субханака окулат. -
             Аъузу...-бисмиллах.... - Фатиха сүрөсү окулат. - Бир сүрө (зам сүрө)
             окулат. - Рукуга ийилет. - Саждага барат. Экинчи рекетке турулат.
+            <img src={Bagumdatimg} alt="img" />
           </div>
           <br />
           <br />
