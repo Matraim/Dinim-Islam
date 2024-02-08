@@ -48,7 +48,7 @@ function App() {
             <>
               <Route path="/home" element={<Home />} />
               {MyRoutes.map((route, index) => (
-                <Route key={index} {...route} />
+                <Route key={index} path={route.path} element={route.element} />
               ))}
             </>
           ) : null}

@@ -35,6 +35,7 @@ const StyledBannerText = styled('div')({
 });
 
 const StyledTypography = styled(Typography)({
-  lineHeight: '1.6',
+  lineHeight: '3',
+  letterSpacing: '1',
   textAlign: 'center',
 });
