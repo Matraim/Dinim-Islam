@@ -1,8 +1,8 @@
-import bannercard1 from '../assets/ImagesGreatPersonalities/33333.jpeg';
-import bannercard2 from '../assets/ImagesGreatPersonalities/33333.jpeg';
-import bannercard3 from '../assets/ImagesGreatPersonalities/33333.jpeg';
-import bannercard4 from '../assets/ImagesGreatPersonalities/33333.jpeg';
-import bannercard5 from '../assets/ImagesGreatPersonalities/33333.jpeg';
+import bannercard1 from '../assets/images/shahada.png';
+import bannercard2 from '../assets/images/namaz.png';
+import bannercard3 from '../assets/images/orozo.png';
+import bannercard4 from '../assets/images/zeket.png';
+import bannercard5 from '../assets/images/ajylyk.png';
 
 const images = [
   bannercard1,
