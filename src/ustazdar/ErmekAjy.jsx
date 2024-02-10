@@ -5,6 +5,7 @@ const ErmekAjy = () => {
   return (
     <Container>
       <BannerText>Устаз Эрмек Ажы Тынай уулу</BannerText>
+      <h3 style={{ textAlign: 'center' }}>Устаздын таасирдуу сабактары</h3>
       <VideosRow>
         <VideoCard>
           <iframe

@@ -5,6 +5,7 @@ const Abdushukurajy = () => {
   return (
     <Container>
       <BannerText>Шейх Абдишүкүр Ажы Нарматов </BannerText>
+      <h3 style={{ textAlign: 'center' }}>Устаздын таасирдуу сабактары</h3>
       <VideosRow>
         <VideoCard>
           <iframe
