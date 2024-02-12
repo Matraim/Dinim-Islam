@@ -62,12 +62,11 @@ export default function Header() {
           <Button
             startIcon={<MosqueIcon />}
             variant="contained"
-            endIcon={<MosqueIcon />}
             onClick={HandleHome}
           >
-            Башкы бет
+            Home
           </Button>
-          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ flexGrow: 2 }} />
 
           {isLoggedIn && (
             <>
