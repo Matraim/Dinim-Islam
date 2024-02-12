@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { images, listData } from '../data/img';
+
 import Sliders from '../components/Sliders';
+import BackForwardButtons from './BackForwardButtons';
 
 const Home = () => {
   return (
@@ -18,7 +20,7 @@ const Home = () => {
           {listData.map((item, index) => (
             <StyledLink to={`/${item.toLowerCase()}`} key={index}>
               <ListItem>
-                <Card>
+                <StyleCard>
                   <CardMedia
                     component="img"
                     height="140"
@@ -28,7 +30,7 @@ const Home = () => {
                   <CardContent>
                     <Typography>{item}</Typography>
                   </CardContent>
-                </Card>
+                </StyleCard>
               </ListItem>
             </StyledLink>
           ))}
@@ -46,6 +48,7 @@ const Home = () => {
         ></iframe>
         <StyleTexth4>Your browser does not support the video tag.</StyleTexth4>
       </Section>
+      <BackForwardButtons />
     </Container>
   );
 };
@@ -55,6 +58,10 @@ export default Home;
 const StyleTexth4 = styled('h4')(() => ({
   textAlign: 'center',
   padding: '1rem',
+}));
+
+const StyleCard = styled(Card)(() => ({
+  width: '170px',
 }));
 
 const Container = styled.div`
