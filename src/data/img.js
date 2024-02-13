@@ -12,8 +12,12 @@ const images = [
   bannercard5,
 ];
 
-export { images };
+const listData = [
+  { title: 'Шахада', path: '/shahada', text: 'Краткое описание Шахады' },
+  { title: 'Намаз', path: '/namaz', text: 'Краткое описание Намаза' },
+  { title: 'Орозо', path: '/orozo', text: 'Краткое описание Орозо' },
+  { title: 'Зекет', path: '/zeket', text: 'Краткое описание Зекета' },
+  { title: 'Ажылык', path: '/ajylyk', text: 'Краткое описание Ажылыка' },
+];
 
-const listData = ['Шахада', 'Намаз', 'Орозо', 'Зекет', 'Ажылык'];
-
-export { listData };
+export { listData, images };

@@ -17,18 +17,21 @@ const Home = () => {
       <Section>
         <Title>Исламдын 5 парзы</Title>
         <List>
-          {listData.map((item, index) => (
-            <StyledLink to={`/${item.toLowerCase()}`} key={index}>
+          {listData.map((item, text) => (
+            <StyledLink to={item.path} key={text}>
               <ListItem>
                 <StyleCard>
                   <CardMedia
                     component="img"
                     height="140"
-                    image={images[index]}
-                    alt={item}
+                    image={images[text]}
+                    alt={item.title}
                   />
                   <CardContent>
-                    <Typography>{item}</Typography>
+                    <StyledTypography variant="h6">
+                      {item.title}
+                    </StyledTypography>
+                    <Typography>{item.text}</Typography>
                   </CardContent>
                 </StyleCard>
               </ListItem>
@@ -67,6 +70,10 @@ const StyleCard = styled(Card)(() => ({
 const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
+`;
+
+const StyledTypography = styled(Typography)`
+  margin-bottom: 8px;
 `;
 
 const Section = styled.div`
