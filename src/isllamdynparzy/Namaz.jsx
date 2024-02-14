@@ -49,12 +49,24 @@ const Namaz = () => {
   const handleClickKajetNamaz = () => {
     navigate('/kajetnamaz');
   };
+  const handleClickVitirVajibNamazy = () => {
+    navigate('/vitirVajibnamazy');
+  };
+  const handleClickyIstiskaNamazy = () => {
+    navigate('/istiskanamazy');
+  };
+  const handleClickKunAiNamazy = () => {
+    navigate('/kunainamazy');
+  };
+  const handleClickMechitNamazy = () => {
+    navigate('/mechitnamazy');
+  };
 
   return (
     <StyleContainer>
       <Content>
         <h1 style={{ textAlign: 'center' }}>НАМАЗ – БЕЙИШТИН АЧКЫЧЫ</h1>
-        <StyleCard>
+        <Card>
           <CardContent>
             <StyleUl>
               <StyledLi>
@@ -107,7 +119,7 @@ const Namaz = () => {
               </StyledLi>
             </StyleUl>
           </CardContent>
-        </StyleCard>
+        </Card>
         <h1 style={{ textAlign: 'center' }}>Кошумча ибадаттар</h1>
         <Card>
           <Content>
@@ -117,6 +129,38 @@ const Namaz = () => {
                   <CardImage src={namazImg} alt="Image 1" />
                   <CardContent>
                     <p>Тахажжуд</p>
+                  </CardContent>
+                </StyleCard>
+              </StyleLi>
+              <StyleLi>
+                <StyleCard onClick={handleClickVitirVajibNamazy}>
+                  <CardImage src={namazImg} alt="Image 1" />
+                  <CardContent>
+                    <p>Витир Важиб</p>
+                  </CardContent>
+                </StyleCard>
+              </StyleLi>
+              <StyleLi>
+                <StyleCard onClick={handleClickMechitNamazy}>
+                  <CardImage src={namazImg} alt="Image 1" />
+                  <CardContent>
+                    <p>Мeчитке салам</p>
+                  </CardContent>
+                </StyleCard>
+              </StyleLi>
+              <StyleLi>
+                <StyleCard onClick={handleClickyIstiskaNamazy}>
+                  <CardImage src={namazImg} alt="Image 1" />
+                  <CardContent>
+                    <p>Истиска намазы</p>
+                  </CardContent>
+                </StyleCard>
+              </StyleLi>
+              <StyleLi>
+                <StyleCard onClick={handleClickKunAiNamazy}>
+                  <CardImage src={namazImg} alt="Image 1" />
+                  <CardContent>
+                    <p>Кусуф жана хусуф</p>
                   </CardContent>
                 </StyleCard>
               </StyleLi>
@@ -213,9 +257,14 @@ const Content = styled.div`
   cursor: pointer;
 `;
 
-const StyleCard = styled(Card)`
-  border: none;
-`;
+const StyleCard = styled(Card)(() => ({
+  border: '1px solid transparent',
+  transition: 'transform 0.5s ease-in-out, border 0.3s ease-in-out',
+  '&:hover': {
+    transform: 'scale(1.01)',
+    borderColor: '#f40c0c',
+  },
+}));
 
 const Author = styled.div`
   font-style: inherit;

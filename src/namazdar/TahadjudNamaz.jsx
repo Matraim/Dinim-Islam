@@ -1,9 +1,10 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
+import { Container, styled } from '@mui/material';
 
 const TahadjudNamaz = () => {
   return (
-    <div>
+    <StyleContainer>
       <Typography variant="h4" gutterBottom>
         ТАХАЖУД НАМАЗЫ КАНДАЙ ОКУЛАТ
       </Typography>
@@ -69,8 +70,12 @@ const TahadjudNamaz = () => {
         «Парз намаздардан кийин эң сонун намаз - түнкү намаз» деп айткан.
         (Муслим, Сыям 202)
       </Typography>
-    </div>
+    </StyleContainer>
   );
 };
 
 export default TahadjudNamaz;
+
+const StyleContainer = styled(Container)(() => ({
+  textAlign: 'center',
+}));

@@ -50,6 +50,10 @@ import KurmanaitNamaz from '../namazdar/KurmanaitNamaz';
 import NafilNamaz from '../namazdar/NafilNamaz';
 import TahadjudNamaz from '../namazdar/TahadjudNamaz';
 import TooboNamaz from '../namazdar/TooboNamaz';
+import VitirVajibNamazy from '../namazdar/VitirVajibNamazy';
+import IstiskaNamazy from '../namazdar/IstiskaNamazy';
+import KunAiNamazy from '../namazdar/KunAiNamazy';
+import MechitNamazy from '../namazdar/MechitNamazy';
 
 const MyRoutes = [
   { path: '/', element: <MainLayout /> },
@@ -58,11 +62,12 @@ const MyRoutes = [
   { path: '/admin', element: <AdminPanel /> },
   { path: '/about', element: <About /> },
   { path: '/info', element: <History /> },
+  { path: '/namaz', element: <Namaz /> },
   { path: '/намаз', element: <Namaz /> },
-  { path: '/шахада', element: <Shahada /> },
-  { path: '/орозо', element: <Orozo /> },
-  { path: '/зекет', element: <Zeket /> },
-  { path: '/ажылык', element: <Ajylyk /> },
+  { path: '/shahada', element: <Shahada /> },
+  { path: '/orozo', element: <Orozo /> },
+  { path: '/zeket', element: <Zeket /> },
+  { path: '/ajylyk', element: <Ajylyk /> },
   { path: '/maksatajy', element: <MaksatAjy /> },
   { path: '/chubakAjy', element: <ChubakAjy /> },
   { path: '/abdushukurajy', element: <Abdushukurajy /> },
@@ -104,6 +109,10 @@ const MyRoutes = [
   { path: '/nafilnamaz', element: <NafilNamaz /> },
   { path: '/tahadjudnamaz', element: <TahadjudNamaz /> },
   { path: '/toobonamaz', element: <TooboNamaz /> },
+  { path: '/vitirVajibnamazy', element: <VitirVajibNamazy /> },
+  { path: '/istiskanamazy', element: <IstiskaNamazy /> },
+  { path: '/kunainamazy', element: <KunAiNamazy /> },
+  { path: '/mechitnamazy', element: <MechitNamazy /> },
 ];
 
 export { MyRoutes };

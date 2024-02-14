@@ -13,11 +13,11 @@ const images = [
 ];
 
 const listData = [
-  { title: 'Шахада', path: '/shahada', text: 'Краткое описание Шахады' },
-  { title: 'Намаз', path: '/namaz', text: 'Краткое описание Намаза' },
-  { title: 'Орозо', path: '/orozo', text: 'Краткое описание Орозо' },
-  { title: 'Зекет', path: '/zeket', text: 'Краткое описание Зекета' },
-  { title: 'Ажылык', path: '/ajylyk', text: 'Краткое описание Ажылыка' },
+  { title: 'Шахада', path: '/shahada', text: 'Шахада келмесинин окуму' },
+  { title: 'Намаз', path: '/namaz', text: 'Намаз бейиштин ачкычы' },
+  { title: 'Орозо', path: '/orozo', text: 'Орозонун пазилети' },
+  { title: 'Зекет', path: '/zeket', text: 'Зекета беруу исламда' },
+  { title: 'Ажылык', path: '/ajylyk', text: 'Ажылыка деген эмне' },
 ];
 
 export { listData, images };
