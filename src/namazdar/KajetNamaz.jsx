@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Kajet = () => {
+const KajetNamaz = () => {
   return <div>Kajet</div>;
 };
 
-export default Kajet;
+export default KajetNamaz;

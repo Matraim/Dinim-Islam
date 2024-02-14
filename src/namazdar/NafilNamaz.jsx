@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Nafil = () => {
+const NafilNamaz = () => {
   return <div>Nafil</div>;
 };
 
-export default Nafil;
+export default NafilNamaz;
