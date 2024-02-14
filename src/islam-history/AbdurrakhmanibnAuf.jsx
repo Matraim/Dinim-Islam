@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import AbdurrakhmanibnAufImg from '../assets/images/Abdurakhmanibnaufimg.png';
+import { Container } from '@mui/material';
 
 const AbdurrakhmanibnAuf = () => {
   return (
@@ -63,10 +64,6 @@ const Paragraph = styled.p`
   font-size: 16px;
   line-height: 1.6;
   color: #333;
-`;
-
-const Container = styled.div`
-  text-align: center;
 `;
 
 const Title = styled.h1`
