@@ -25,6 +25,30 @@ const Namaz = () => {
   const handleClickJannat = () => {
     navigate('/jannat');
   };
+  const handleClickIstihara = () => {
+    navigate('/istihara');
+  };
+  const handleClickJanaza = () => {
+    navigate('/janazanamaz');
+  };
+  const handleClickTahadjudNamaz = () => {
+    navigate('/tahadjudnamaz');
+  };
+  const handleClickTooboNamaz = () => {
+    navigate('/toobonamaz');
+  };
+  const handleClickNafilNamaz = () => {
+    navigate('/nafilnamaz');
+  };
+  const handleClickJumaNamaz = () => {
+    navigate('/jumanamaz');
+  };
+  const handleClickKurmanaitNamaz = () => {
+    navigate('/kurmanaitnamaz');
+  };
+  const handleClickKajetNamaz = () => {
+    navigate('/kajetnamaz');
+  };
 
   return (
     <StyleContainer>
@@ -89,7 +113,7 @@ const Namaz = () => {
           <Content>
             <StyleUl>
               <StyleLi>
-                <StyleCard>
+                <StyleCard onClick={handleClickTahadjudNamaz}>
                   <CardImage src={namazImg} alt="Image 1" />
                   <CardContent>
                     <p>Тахажжуд</p>
@@ -97,7 +121,7 @@ const Namaz = () => {
                 </StyleCard>
               </StyleLi>
               <StyleLi>
-                <StyleCard>
+                <StyleCard onClick={handleClickTooboNamaz}>
                   <CardImage src={namazImg} alt="Image 2" />
                   <CardContent>
                     <p>Тообо намазы</p>
@@ -105,7 +129,7 @@ const Namaz = () => {
                 </StyleCard>
               </StyleLi>
               <StyleLi>
-                <StyleCard>
+                <StyleCard onClick={handleClickKurmanaitNamaz}>
                   <CardImage src={namazImg} alt="Image 2" />
                   <CardContent>
                     <p>Курман айт намазы</p>
@@ -113,7 +137,7 @@ const Namaz = () => {
                 </StyleCard>
               </StyleLi>
               <StyleLi>
-                <StyleCard>
+                <StyleCard onClick={handleClickJumaNamaz}>
                   <CardImage src={namazImg} alt="Image 2" />
                   <CardContent>
                     <p>Жума Намазы</p>
@@ -121,7 +145,7 @@ const Namaz = () => {
                 </StyleCard>
               </StyleLi>
               <StyleLi>
-                <StyleCard>
+                <StyleCard onClick={handleClickKajetNamaz}>
                   <CardImage src={namazImg} alt="Image 2" />
                   <CardContent>
                     <p>Кажет Намазы</p>
@@ -129,7 +153,7 @@ const Namaz = () => {
                 </StyleCard>
               </StyleLi>
               <StyleLi>
-                <StyleCard>
+                <StyleCard onClick={handleClickNafilNamaz}>
                   <CardImage src={namazImg} alt="Image 2" />
                   <CardContent>
                     <p>Нафил Намазы</p>
@@ -137,7 +161,7 @@ const Namaz = () => {
                 </StyleCard>
               </StyleLi>
               <StyleLi>
-                <StyleCard>
+                <StyleCard onClick={handleClickJanaza}>
                   <CardImage src={namazImg} alt="Image 2" />
                   <CardContent>
                     <p>Жаназа Намазы</p>
@@ -145,7 +169,7 @@ const Namaz = () => {
                 </StyleCard>
               </StyleLi>
               <StyleLi>
-                <StyleCard>
+                <StyleCard onClick={handleClickIstihara}>
                   <CardImage src={namazImg} alt="Image 2" />
                   <CardContent>
                     <p>Истихара Намазы</p>
