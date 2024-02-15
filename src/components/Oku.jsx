@@ -4,12 +4,30 @@ import styled from 'styled-components';
 import { Card, Container } from '@mui/material';
 import { Link } from 'react-router-dom';
 import Img from '../assets/images/Abdurakhmanibnaufimg.png';
+import { bilishkerek } from '../data/bilishkerek';
 
 const Oku = () => {
   return (
     <StyleContainer>
       <Content>
         {oku.map((figure, index) => (
+          <StyledCard key={index}>
+            <Link to={figure.path}>
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <CardImage src={Img} alt="" />
+              </div>
+              <CardTitle>{figure.name}</CardTitle>
+            </Link>
+            <StyleCardSmallText>{figure.text}</StyleCardSmallText>
+            <StyleHeaderTextStatus>{figure.status}</StyleHeaderTextStatus>
+          </StyledCard>
+        ))}
+      </Content>
+      <div>
+        <h1 style={{ textAlign: 'center', padding: '2rem' }}>Билиш керек</h1>
+      </div>
+      <Content>
+        {bilishkerek.map((figure, index) => (
           <StyledCard key={index}>
             <Link to={figure.path}>
               <div style={{ display: 'flex', justifyContent: 'center' }}>
