@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, styled } from '@mui/material';
 
 const JanazaNamaz = () => {
   return (
-    <Container>
+    <StyleContainer>
       <Typography variant="h2">Жаназа намазы</Typography>
       <Typography variant="body1">
         Жаназа намазы төмөнкүчө окулат. Жаназа намаз төрт такбирден жана кыямдан
@@ -45,8 +45,13 @@ const JanazaNamaz = () => {
         такбирди, оң жана сол ийинге берилген саламды гана үнүн чыгарып айтат,
         калган жерлерде ичинен окуйт. Ошентип жаназа намазы соңуна чыгат.
       </Typography>
-    </Container>
+    </StyleContainer>
   );
 };
 
 export default JanazaNamaz;
+
+const StyleContainer = styled(Container)(() => ({
+  textAlign: 'center',
+  padding: '1rem',
+}));

@@ -45,4 +45,5 @@ export default Asr;
 
 const StyleContainer = styled(Container)({
   textAlign: 'center',
+  padding: '1rem',
 });

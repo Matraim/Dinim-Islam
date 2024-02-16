@@ -51,4 +51,6 @@ export default KurmanaitNamaz;
 
 const StyleContainer = styled(Container)(() => ({
   color: 'black',
+  textAlign: 'center',
+  padding: '1rem',
 }));
