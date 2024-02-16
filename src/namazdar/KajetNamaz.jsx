@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, styled } from '@mui/material';
 
 const KajetNamaz = () => {
   return (
-    <Container>
+    <StyleContainer>
       <Typography variant="h2">Хаджат намазы</Typography>
       <Typography variant="body1">
         Дүйнөлүк же акыреттик кандайдыр бир муктаждыктары бар адам даарат алып,
@@ -42,8 +42,13 @@ const KajetNamaz = () => {
         Өрөзүчүлүгүңө шай келген ар бир муктаждыгымды аткар. Оо, өрөзүчүлөрдүн
         өрөзүчүсү болгон Аллахым!» (Тирмизи, Витир 17).
       </Typography>
-    </Container>
+    </StyleContainer>
   );
 };
 
 export default KajetNamaz;
+
+const StyleContainer = styled(Container)(() => ({
+  textAlign: 'center',
+  padding: '1rem',
+}));

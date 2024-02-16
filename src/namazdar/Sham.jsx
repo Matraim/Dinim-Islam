@@ -64,4 +64,5 @@ export default Sham;
 
 const StyleContainer = styled(Container)({
   textAlign: 'center',
+  padding: '1rem',
 });

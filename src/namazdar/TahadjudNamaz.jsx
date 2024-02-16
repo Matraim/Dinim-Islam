@@ -78,4 +78,5 @@ export default TahadjudNamaz;
 
 const StyleContainer = styled(Container)(() => ({
   textAlign: 'center',
+  paddingBottom: '2rem',
 }));

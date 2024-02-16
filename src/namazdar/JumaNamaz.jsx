@@ -4,7 +4,9 @@ import { Typography, List, ListItem, Container, styled } from '@mui/material';
 const JumaNamaz = () => {
   return (
     <Container>
-      <StyleListItem>Жума намазы</StyleListItem>
+      <StyleTextBanner>
+        <h2>Жума намазы</h2>
+      </StyleTextBanner>
       <StyleListItem>
         Жума күнү 16 рекет намаз окулат. [Булардын эки рекети парз. Бешим
         намазынан дагы кубаттуу парз.] Булар ирети менен мындай:
@@ -33,4 +35,9 @@ export default JumaNamaz;
 
 const StyleListItem = styled(ListItem)(() => ({
   color: 'black',
+  textAlign: 'center',
+}));
+const StyleTextBanner = styled('div')(() => ({
+  color: 'black',
+  textAlign: 'center',
 }));
