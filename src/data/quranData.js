@@ -4,10 +4,9 @@ const quranData = [
   {
     id: 1,
     name: 'Мишари Рашид',
-    nationality: 'Кувейт',
     position: 'Имам Кувейт,',
     imageUrl: Hafizimg,
-    path: '/misharirashid',
+    path: './misharirashidhafiz',
   },
   {
     id: 2,
@@ -15,6 +14,7 @@ const quranData = [
     nationality: 'Каир',
     position: 'хафиз',
     imageUrl: Hafizimg,
+    path: './abdulbasit',
   },
   {
     id: 3,
@@ -22,6 +22,7 @@ const quranData = [
     nationality: 'Аравии',
     position: 'хафиз',
     imageUrl: Hafizimg,
+    path: './muhammadayub',
   },
   {
     id: 4,
@@ -29,6 +30,7 @@ const quranData = [
     nationality: 'Мьянма',
     position: 'Имам',
     imageUrl: Hafizimg,
+    path: './abdulbasit',
   },
   {
     id: 5,
@@ -36,6 +38,7 @@ const quranData = [
     nationality: 'Индонезийский',
     position: 'хафиз',
     imageUrl: Hafizimg,
+    path: './abdulbasit',
   },
   {
     id: 6,
@@ -43,6 +46,7 @@ const quranData = [
     nationality: 'Кувейт',
     position: 'Имам Кувейт,',
     imageUrl: Hafizimg,
+    path: './abdulbasit',
   },
   {
     id: 7,
