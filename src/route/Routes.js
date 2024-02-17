@@ -113,6 +113,7 @@ const MyRoutes = [
   { path: '/istiskanamazy', element: <IstiskaNamazy /> },
   { path: '/kunainamazy', element: <KunAiNamazy /> },
   { path: '/mechitnamazy', element: <MechitNamazy /> },
+  { path: '/misharirashid', element: <MishariRashid /> },
 ];
 
 export { MyRoutes };

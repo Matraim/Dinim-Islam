@@ -66,6 +66,7 @@ const Quran = () => {
                 <Rating
                   name={`rating-${item.id}`}
                   value={item.rating}
+                  s
                   onChange={(event, newValue) =>
                     handleRatingChange(item.id, newValue)
                   }
