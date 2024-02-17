@@ -41,7 +41,6 @@ import SaadIbnAbuVakkas from '../islam-history/AbuVakkass';
 import SaidIbnZaid from '../islam-history/SaidIbnZaid';
 import TalhaIbnUbaidullah from '../islam-history/TalhaIbnUbaudyllah';
 import ZubairIbnAvvam from '../islam-history/ZubairIbnAvvam';
-import MishariRashid from '../hafizder/MishariRashid';
 import Istihara from '../namazdar/Istihara';
 import JumaNamaz from '../namazdar/JumaNamaz';
 import JanazaNamaz from '../namazdar/JanazaNamaz';
@@ -54,6 +53,10 @@ import VitirVajibNamazy from '../namazdar/VitirVajibNamazy';
 import IstiskaNamazy from '../namazdar/IstiskaNamazy';
 import KunAiNamazy from '../namazdar/KunAiNamazy';
 import MechitNamazy from '../namazdar/MechitNamazy';
+import AbdulBasit from '../hafizder/AbdulBasit';
+import SaadAlGhamidi from '../hafizder/SaadAlGhamidi';
+import MuhammadAyub from '../hafizder/MuhammadAyub';
+import MuminAynul from '../hafizder/MuminAynul';
 
 const MyRoutes = [
   { path: '/', element: <MainLayout /> },
@@ -100,7 +103,6 @@ const MyRoutes = [
   { path: '/saidibnzaid', element: <SaidIbnZaid /> },
   { path: '/talhaubnubaidullah', element: <TalhaIbnUbaidullah /> },
   { path: '/zubairibnavvam', element: <ZubairIbnAvvam /> },
-  { path: '/misharirashid', element: <MishariRashid /> },
   { path: '/istihara', element: <Istihara /> },
   { path: '/jumanamaz', element: <JumaNamaz /> },
   { path: '/janazanamaz', element: <JanazaNamaz /> },
@@ -113,7 +115,10 @@ const MyRoutes = [
   { path: '/istiskanamazy', element: <IstiskaNamazy /> },
   { path: '/kunainamazy', element: <KunAiNamazy /> },
   { path: '/mechitnamazy', element: <MechitNamazy /> },
-  { path: '/misharirashid', element: <MishariRashid /> },
+  { path: '/abdulbasit', element: <AbdulBasit /> },
+  { path: '/saadalgamid', element: <SaadAlGhamidi /> },
+  { path: '/muhammadayub', element: <MuhammadAyub /> },
+  { path: '/muminaynul', element: <MuminAynul /> },
 ];
 
 export { MyRoutes };
