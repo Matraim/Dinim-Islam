@@ -35,9 +35,9 @@ const Quiz = () => {
   const [showFinalResults, setShowFinalResults] = useState(false);
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [setShowAllAnswers] = useState(false);
+  const [setShowAllAnswers] = useState(false); // Fixed variable name
   const [isAnswersVisible, setIsAnswersVisible] = useState(false);
-  const [setShowConfetti] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false); // Fixed variable name
   const { width, height } = useWindowSize();
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const Quiz = () => {
         setShowConfetti(false);
       }, 1000);
     }
-  }, [score, setShowConfetti]);
+  }, [score]);
 
   const optionClicked = (isCorrect, optionIndex) => {
     if (!isCorrect) {
@@ -118,7 +118,9 @@ const Quiz = () => {
               }}
               onClick={toggleAnswersVisibility}
             >
-              <Confetti width={width} height={height} {...confettiConfig} />
+              {showConfetti && (
+                <Confetti width={width} height={height} {...confettiConfig} />
+              )}
               <MenuOpenIcon />
             </button>
             <h1>Сынактын жалпы жыйынтыгы</h1>
@@ -189,7 +191,7 @@ const Quiz = () => {
                             : 'incorrect'
                         }
                       >
-                        {question.options[0].text}
+                        {question.options.find((opt) => opt.chosen).text}{' '}
                       </TableCell>
                     </TableRow>
                   ))}
@@ -199,7 +201,6 @@ const Quiz = () => {
           </div>
         )}
       </div>
-
       <ToastContainer />
     </div>
   );
