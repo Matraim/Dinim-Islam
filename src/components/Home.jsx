@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
-import { images, listData } from '../data/img';
+import { listData } from '../data/img';
 
 import Sliders from '../components/Sliders';
 import BackForwardButtons from './BackForwardButtons';
@@ -17,21 +17,14 @@ const Home = () => {
       <Section>
         <Title>Исламдын 5 парзы</Title>
         <List>
-          {listData.map((item, text) => (
-            <StyledLink to={item.path} key={text}>
+          {listData.map((item) => (
+            <StyledLink to={item.path} key={item.title}>
               <ListItem>
                 <StyleCard>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image={images[text]}
-                    alt={item.title}
-                  />
+                  <CardMedia component="img" height="140" alt={item.title} />
                   <CardContent>
-                    <StyledTypography variant="h6">
-                      {item.title}
-                    </StyledTypography>
-                    <Typography>{item.text}</Typography>
+                    <StyledTypography>{item.title}</StyledTypography>
+                    <Typography>{item.transliteration}</Typography>
                   </CardContent>
                 </StyleCard>
               </ListItem>
