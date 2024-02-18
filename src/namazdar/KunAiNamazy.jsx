@@ -16,6 +16,7 @@ const KunAiNamazy = () => {
         өйдө турган калыбында алакан жая Жаратканга дуба кылат. Имам жок болсо,
         ар ким өз үйүндө жалгыз окуса болот. Бул намазды жеке окуса да болот.
       </div>
+      <StyleSpacer />
       <div>
         <StyleBannerText2>
           <h2>ХУСУФ НАМАЗЫ:</h2>
@@ -56,4 +57,8 @@ const StyleBannerText2 = styled('div')(() => ({
   textAlign: 'center',
   paddingBottom: '1rem',
   paddingTop: '1rem',
+}));
+
+const StyleSpacer = styled('div')(() => ({
+  height: '2rem',
 }));
