@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
-import { listData } from '../data/img';
-
+import { images, listData } from '../data/img';
 import Sliders from '../components/Sliders';
 import BackForwardButtons from './BackForwardButtons';
 
@@ -16,12 +15,27 @@ const Home = () => {
       </Section>
       <Section>
         <Title>Исламдын 5 парзы</Title>
-        <List>
-          {listData.map((item) => (
-            <StyledLink to={item.path} key={item.title}>
+        <List
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+          }}
+        >
+          {listData.map((item, index) => (
+            <StyledLink
+              to={item.path}
+              key={item.title}
+              style={{ flexBasis: '18%', marginBottom: '20px' }}
+            >
               <ListItem>
                 <StyleCard>
-                  <CardMedia component="img" height="140" alt={item.title} />
+                  <CardMedia
+                    component="img"
+                    height="140"
+                    alt={item.title}
+                    src={images[index]}
+                  />{' '}
                   <CardContent>
                     <StyledTypography>{item.title}</StyledTypography>
                     <Typography>{item.transliteration}</Typography>
@@ -32,6 +46,7 @@ const Home = () => {
           ))}
         </List>
       </Section>
+
       <Section>
         <iframe
           width="100%"

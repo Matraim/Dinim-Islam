@@ -18,8 +18,12 @@ const StyleContainer = styled.footer`
   background-color: #1976d2;
   color: #fff;
   text-align: center;
+  display: flex;
   width: 100%;
   padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.7rem;
 `;
 
 const StyleContent = styled.div`
