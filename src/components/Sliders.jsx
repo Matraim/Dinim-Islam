@@ -4,17 +4,6 @@ import { sliderrs } from '../data/slides.js';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
 import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 
-const SliderContainer = styled.div`
-  position: relative;
-`;
-
-const Slide = styled.div`
-  img {
-    width: 100%;
-    height: auto;
-  }
-`;
-
 const Button = styled.button`
   position: absolute;
   top: 50%;
@@ -77,7 +66,23 @@ const Slider = ({ slides }) => {
 
 export default Slider;
 
-const StyleImg = styled('img')(() => ({
-  fontSize: '20px',
-  borderRadius: '0.3rem',
-}));
+const SliderContainer = styled.div`
+  position: relative;
+  width: 100%; /* Фиксированная ширина контейнера */
+  max-width: 1200px; /* Максимальная ширина контейнера (можете изменить по вашему усмотрению) */
+  height: auto; /* Автоматическая высота */
+  overflow: hidden; /* Скрытие частей слайдов, которые выходят за пределы контейнера */
+`;
+
+const Slide = styled.div`
+  width: 100%; /* Фиксированная ширина слайда */
+  height: auto; /* Автоматическая высота слайда */
+  display: none; /* Изначально скрываем все слайды */
+`;
+
+const StyleImg = styled.img`
+  width: 100%; /* Изображение займет всю ширину слайда */
+  height: auto; /* Автоматическая высота */
+  display: block; /* Отображаем изображение как блочный элемент */
+  border-radius: 0.3rem;
+`;

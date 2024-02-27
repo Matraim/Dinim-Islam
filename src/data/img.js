@@ -12,6 +12,8 @@ const images = [
   bannercard5,
 ];
 
+export { images };
+
 const listData = [
   {
     title: 'Шахада',
@@ -24,4 +26,4 @@ const listData = [
   { title: 'Ажылык', path: '/ajylyk', transliteration: 'Ажылыка деген эмне' },
 ];
 
-export { listData, images };
+export { listData };
