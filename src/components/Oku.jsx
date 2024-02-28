@@ -1,10 +1,9 @@
 import React from 'react';
 import { oku } from '../data/oku';
+import { bilishkerek } from '../data/bilishkerek';
 import styled from 'styled-components';
 import { Card, Container } from '@mui/material';
 import { Link } from 'react-router-dom';
-import Img from '../assets/images/Abdurakhmanibnaufimg.png';
-import { bilishkerek } from '../data/bilishkerek';
 
 const Oku = () => {
   return (
@@ -13,13 +12,15 @@ const Oku = () => {
         {oku.map((figure, index) => (
           <StyledCard key={index}>
             <Link to={figure.path}>
-              <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <CardImage src={Img} alt="" />
-              </div>
-              <CardTitle>{figure.name}</CardTitle>
+              <CardImageAndText>
+                <CardImage src={figure.image} alt={figure.name} />
+                <CardContent>
+                  <CardTitle>{figure.name}</CardTitle>
+                  <StyleCardSmallText>{figure.text}</StyleCardSmallText>
+                  <StyleHeaderTextStatus>{figure.status}</StyleHeaderTextStatus>
+                </CardContent>
+              </CardImageAndText>
             </Link>
-            <StyleCardSmallText>{figure.text}</StyleCardSmallText>
-            <StyleHeaderTextStatus>{figure.status}</StyleHeaderTextStatus>
           </StyledCard>
         ))}
       </Content>
@@ -30,13 +31,15 @@ const Oku = () => {
         {bilishkerek.map((figure, index) => (
           <StyledCard key={index}>
             <Link to={figure.path}>
-              <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <CardImage src={Img} alt="" />
-              </div>
-              <CardTitle>{figure.name}</CardTitle>
+              <CardImageAndText>
+                <CardImage src={figure.image} alt={figure.name} />
+                <CardContent>
+                  <CardTitle>{figure.name}</CardTitle>
+                  <StyleCardSmallText>{figure.text}</StyleCardSmallText>
+                  <StyleHeaderTextStatus>{figure.status}</StyleHeaderTextStatus>
+                </CardContent>
+              </CardImageAndText>
             </Link>
-            <StyleCardSmallText>{figure.text}</StyleCardSmallText>
-            <StyleHeaderTextStatus>{figure.status}</StyleHeaderTextStatus>
           </StyledCard>
         ))}
       </Content>
@@ -53,11 +56,15 @@ const Content = styled.div`
 
 const StyledCard = styled(Card)`
   flex: 1 1 calc(33.333% - 20px);
-`;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 
-const StyleCardSmallText = styled.div`
-  text-align: center;
-  padding: 0.1rem;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 const StyleContainer = styled(Container)(() => ({
@@ -65,18 +72,34 @@ const StyleContainer = styled(Container)(() => ({
   paddingBottom: '2rem',
 }));
 
-const CardImage = styled('img')(() => ({
-  backgroundSize: 'contain',
-  width: '5rem',
-}));
-
-const CardTitle = styled.div`
+const CardImageAndText = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+`;
+
+const CardContent = styled.div`
   padding: 0.5rem;
 `;
 
+const CardImage = styled('img')(() => ({
+  width: '100%',
+  height: 'auto',
+  borderRadius: '10px', // Добавляем скругление углов для более красивого вида
+  boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', // Добавляем небольшую тень для выделения изображения
+}));
+
+const CardTitle = styled.div`
+  padding: 0.5rem;
+`;
+
+const StyleCardSmallText = styled.div`
+  padding: 0.1rem;
+`;
+
 const StyleHeaderTextStatus = styled.div`
-  text-align: center;
   padding: 0rem;
 `;
 
