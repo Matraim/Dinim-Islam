@@ -43,7 +43,7 @@ export default BackForwardButtons;
 
 const StyleButton = styled(Button)(() => ({
   position: 'fixed',
-  top: '5rem',
+  top: '6rem',
   left: '96px',
   zIndex: 1000,
 }));

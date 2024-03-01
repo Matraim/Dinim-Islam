@@ -91,6 +91,15 @@ export default function Header() {
             </>
           )}
         </Toolbar>
+        <div
+          style={{
+            backgroundColor: 'black',
+            padding: '0.4rem',
+            textAlign: 'center',
+          }}
+        >
+          Laa Ilaaha Illallah Muhammadur rasulAllah
+        </div>
       </AppBar>
       <Toolbar />
     </Box>
