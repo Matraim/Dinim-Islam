@@ -1,16 +1,10 @@
-import bannercard1 from '../assets/images/shahada.png';
-import bannercard2 from '../assets/images/namaz.png';
-import bannercard3 from '../assets/images/orozo.png';
-import bannercard4 from '../assets/images/zeket.png';
-import bannercard5 from '../assets/images/ajylyk.png';
+import imgcard1 from '../assets/images/imgcard1.jpeg';
+import imgcard2 from '../assets/images/imgcard2.jpeg';
+import imgcard3 from '../assets/images/imgcard3.jpeg';
+import imgcard4 from '../assets/images/card4img.jpeg';
+import imgcard5 from '../assets/images/card5img.jpeg';
 
-const images = [
-  bannercard1,
-  bannercard2,
-  bannercard3,
-  bannercard4,
-  bannercard5,
-];
+const images = [imgcard1, imgcard2, imgcard3, imgcard4, imgcard5];
 
 export { images };
 
@@ -18,12 +12,33 @@ const listData = [
   {
     title: 'Шахада',
     path: '/shahada',
-    transliteration: 'Шахада келмесинин окуму',
+    transliteration: 'келмесинин окуму',
+    rating: '5/5',
   },
-  { title: 'Намаз', path: '/namaz', transliteration: 'Намаз бейиштин ачкычы' },
-  { title: 'Орозо', path: '/orozo', transliteration: 'Орозонун пазилети' },
-  { title: 'Зекет', path: '/zeket', transliteration: 'Зекета беруу исламда' },
-  { title: 'Ажылык', path: '/ajylyk', transliteration: 'Ажылыка деген эмне' },
+  {
+    title: 'Намаз',
+    path: '/namaz',
+    transliteration: 'бейиштин ачкычы',
+    rating: '5/5',
+  },
+  {
+    title: 'Орозо',
+    path: '/orozo',
+    transliteration: 'Орозонун пазилети',
+    rating: '5/5',
+  },
+  {
+    title: 'Зекет',
+    path: '/zeket',
+    transliteration: 'беруу исламда',
+    rating: '5/5',
+  },
+  {
+    title: 'Ажылык',
+    path: '/ajylyk',
+    transliteration: 'деген эмне',
+    rating: '5/5',
+  },
 ];
 
 export { listData };
