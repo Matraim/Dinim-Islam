@@ -9,7 +9,7 @@ const teamMembers = [
     imageUrl: ImgTeam,
   },
   {
-    name: 'Мария',
+    name: 'fasfs',
     surname: 'Иванова',
     position: 'Дизайнер',
     age: 28,

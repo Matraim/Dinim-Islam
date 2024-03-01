@@ -1,7 +1,7 @@
 import MaksatBekAjy from '../assets/images/максатбекажы.jpeg';
 import ChubakAjyImg from '../assets/images/chubakajy.jpg';
 import Abdushukurajyimg from '../assets/images/abdushukurajy.jpeg';
-import ErmekAjyImg from '../assets//images/ermekajy.png';
+import ErmekAjyImg from '../assets/images/ermekajy.png';
 
 const Ustazdar = [
   {
