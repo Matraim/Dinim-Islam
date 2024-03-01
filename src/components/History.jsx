@@ -4,12 +4,10 @@ import historicalFigures from '../data/historicalFigure';
 import Bismillah from '../data/islam';
 import Ustazdar from '../data/ustazdar';
 import { Container, Typography } from '@mui/material';
-import BackForwardButtons from './BackForwardButtons';
 
 const History = () => {
   return (
     <Container>
-      <BackForwardButtons />
       <StyleHeaderText>
         <h2>Бейиш менен сүйүнчүлөнгөн 10 Сахаба.</h2>
         <br />
