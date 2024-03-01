@@ -2,6 +2,7 @@ import { styled } from '@mui/material';
 import React from 'react';
 import { developers } from '../utils/developers.js';
 import { Container } from '@mui/system';
+import BackForwardButtons from './BackForwardButtons.jsx';
 
 const borderRadiuses = [
   '0px 0px 0px 40px',
@@ -17,6 +18,7 @@ const borderRadiuses = [
 export const About = () => {
   return (
     <MainTeamContainer>
+      <BackForwardButtons />
       <h1>Our Team</h1>
       <Container className="ImageContainer">
         {developers.map((developer, index) => (

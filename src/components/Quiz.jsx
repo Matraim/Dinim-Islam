@@ -17,6 +17,7 @@ import useWindowSize from 'react-use/lib/useWindowSize';
 import questions from '../data/question.js';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import '../style/App.css';
+import BackForwardButtons from './BackForwardButtons.jsx';
 
 const confettiConfig = {
   angle: 1,
@@ -95,6 +96,7 @@ const Quiz = () => {
   };
   return (
     <div className="App">
+      <BackForwardButtons />
       <h3>
         Кыргызча диний суроо жооптор<span style={{ color: 'red' }}>.</span>
       </h3>

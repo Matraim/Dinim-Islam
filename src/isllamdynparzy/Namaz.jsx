@@ -3,6 +3,7 @@ import { Card, CardContent, Typography, Container } from '@mui/material';
 import namazImg from '../assets/images/намаз.jpeg';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import BackForwardButtons from '../components/BackForwardButtons';
 
 const Namaz = () => {
   const navigate = useNavigate();
@@ -64,6 +65,7 @@ const Namaz = () => {
 
   return (
     <StyleContainer>
+      <BackForwardButtons />
       <Content>
         <h1 style={{ textAlign: 'center' }}>НАМАЗ – БЕЙИШТИН АЧКЫЧЫ</h1>
         <Card>
