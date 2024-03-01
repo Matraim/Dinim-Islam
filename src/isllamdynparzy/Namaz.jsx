@@ -4,6 +4,12 @@ import namazImg from '../assets/images/намаз.jpeg';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import BackForwardButtons from '../components/BackForwardButtons';
+import imgcard1 from '../assets/images/imgcard1.jpeg';
+import imgcard2 from '../assets/images/imgcard2.jpeg';
+import imgcard3 from '../assets/images/imgcard3.jpeg';
+import imgcard4 from '../assets/images/card4img.jpeg';
+import imgcard5 from '../assets/images/card5img.jpeg';
+import imgcard6 from '../assets/images/card6img.jpeg';
 
 const Namaz = () => {
   const navigate = useNavigate();
@@ -73,7 +79,7 @@ const Namaz = () => {
             <StyleUl>
               <StyledLi>
                 <StyleCard onClick={handleClickBagymdat}>
-                  <CardImage src={namazImg} alt="Image 1" />
+                  <CardImage src={imgcard1} alt="Image 1" />
                   <CardContent>
                     <p>Багымдат</p>
                   </CardContent>
@@ -81,7 +87,7 @@ const Namaz = () => {
               </StyledLi>
               <StyledLi>
                 <StyleCard onClick={handleClickBeshim}>
-                  <CardImage src={namazImg} alt="Image 2" />
+                  <CardImage src={imgcard2} alt="Image 2" />
                   <CardContent>
                     <p>Бешим</p>
                   </CardContent>
@@ -89,7 +95,7 @@ const Namaz = () => {
               </StyledLi>
               <StyledLi>
                 <StyleCard onClick={handleClickAsr}>
-                  <CardImage src={namazImg} alt="Image 2" />
+                  <CardImage src={imgcard3} alt="Image 2" />
                   <CardContent>
                     <p>Аср</p>
                   </CardContent>
@@ -97,7 +103,7 @@ const Namaz = () => {
               </StyledLi>
               <StyledLi>
                 <StyleCard onClick={handleClickSham}>
-                  <CardImage src={namazImg} alt="Image 2" />
+                  <CardImage src={imgcard4} alt="Image 2" />
                   <CardContent>
                     <p>Шам</p>
                   </CardContent>
@@ -105,7 +111,7 @@ const Namaz = () => {
               </StyledLi>
               <StyledLi>
                 <StyleCard onClick={handleClickJannat}>
-                  <CardImage src={namazImg} alt="Image 2" />
+                  <CardImage src={imgcard6} alt="Image 2" />
                   <CardContent>
                     <p>Эмне Учун Намаз окуш керек ?</p>
                   </CardContent>
@@ -113,7 +119,7 @@ const Namaz = () => {
               </StyledLi>
               <StyledLi>
                 <StyleCard onClick={handleClickKuptan}>
-                  <CardImage src={namazImg} alt="Image 2" />
+                  <CardImage src={imgcard5} alt="Image 2" />
                   <CardContent>
                     <p>Куптан</p>
                   </CardContent>
