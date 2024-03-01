@@ -4,10 +4,12 @@ import { bilishkerek } from '../data/bilishkerek';
 import styled from 'styled-components';
 import { Card, Container } from '@mui/material';
 import { Link } from 'react-router-dom';
+import BackForwardButtons from './BackForwardButtons';
 
 const Oku = () => {
   return (
     <StyleContainer>
+      <BackForwardButtons />
       <Content>
         {oku.map((figure, index) => (
           <StyledCard key={index}>
@@ -52,10 +54,13 @@ const Content = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  max-width: calc(100% + 20px);
 `;
 
 const StyledCard = styled(Card)`
-  flex: 1 1 calc(33.333% - 20px);
+  flex: 1 1 calc(25% - 25px);
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -87,8 +92,8 @@ const CardContent = styled.div`
 const CardImage = styled('img')(() => ({
   width: '100%',
   height: 'auto',
-  borderRadius: '10px', // Добавляем скругление углов для более красивого вида
-  boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', // Добавляем небольшую тень для выделения изображения
+  borderRadius: '10px',
+  boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
 }));
 
 const CardTitle = styled.div`
