@@ -267,7 +267,7 @@ const Content = styled.div`
 
 const StyleCard = styled(Card)(() => ({
   border: '1px solid transparent',
-  transition: 'transform 0.5s ease-in-out, border 0.3s ease-in-out',
+  transition: 'transform 3.5s ease-in-out, border 0.3s ease-in-out',
   '&:hover': {
     transform: 'scale(1.01)',
     borderColor: '#f40c0c',

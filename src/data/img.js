@@ -13,31 +13,31 @@ const listData = [
     title: 'Шахада',
     path: '/shahada',
     transliteration: 'келмесинин окуму',
-    rating: '5/5',
+    rating: '10/10',
   },
   {
     title: 'Намаз',
     path: '/namaz',
     transliteration: 'бейиштин ачкычы',
-    rating: '5/5',
+    rating: '10/10',
   },
   {
     title: 'Орозо',
     path: '/orozo',
-    transliteration: 'Орозонун пазилети',
-    rating: '5/5',
+    transliteration: 'пазилети',
+    rating: '10/10',
   },
   {
     title: 'Зекет',
     path: '/zeket',
     transliteration: 'беруу исламда',
-    rating: '5/5',
+    rating: '10/10',
   },
   {
     title: 'Ажылык',
     path: '/ajylyk',
     transliteration: 'деген эмне',
-    rating: '5/5',
+    rating: '10/10',
   },
 ];
 
