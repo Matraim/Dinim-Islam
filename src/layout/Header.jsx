@@ -11,6 +11,7 @@ import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux';
 import { actionsAuth, selectorAuth } from '../redux/slices/auth';
 import { useNavigate } from 'react-router-dom';
+import { Typography } from '@mui/material';
 
 export default function Header() {
   const { isLoggedIn } = useSelector(selectorAuth);
@@ -94,11 +95,22 @@ export default function Header() {
         <div
           style={{
             backgroundColor: 'black',
-            padding: '0.4rem',
+            padding: '0.5rem',
             textAlign: 'center',
+            display: 'center',
+            alignItems: 'center',
+            justifyContent: 'space-around',
           }}
         >
-          Laa Ilaaha Illallah Muhammadur rasulAllah
+          <Typography style={{ color: '#bcbba4' }}>
+            Laa Ilaaha Illallah Muhammadur rasulAllah
+          </Typography>{' '}
+          <Typography style={{ color: '#bcbba4' }}>
+            Laa Ilaaha Illallah Muhammadur rasulAllah
+          </Typography>{' '}
+          <Typography style={{ color: '#bcbba4' }}>
+            Laa Ilaaha Illallah Muhammadur rasulAllah
+          </Typography>{' '}
         </div>
       </AppBar>
       <Toolbar />
