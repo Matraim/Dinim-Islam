@@ -7,7 +7,7 @@ const quranData = [
     nationality: 'Египтянин',
     city: 'Мекка',
     imageUrl: Hafizimg,
-    path: './abdulbasit',
+    path: '/HafizIslamSubhi',
   },
   {
     id: 2,
