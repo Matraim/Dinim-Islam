@@ -1,4 +1,4 @@
-import { Container, Link, Card, CardContent, Typography } from '@mui/material';
+import { Container, Card, CardContent, Typography, Link } from '@mui/material';
 import { styled } from '@mui/system';
 import { quranData } from '../data/quranData';
 
