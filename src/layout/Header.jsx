@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { actionsAuth, selectorAuth } from '../redux/slices/auth';
 import { useNavigate } from 'react-router-dom';
 import { Typography } from '@mui/material';
+import styled from 'styled-components';
 
 export default function Header() {
   const { isLoggedIn } = useSelector(selectorAuth);
@@ -92,16 +93,7 @@ export default function Header() {
             </>
           )}
         </Toolbar>
-        <div
-          style={{
-            backgroundColor: 'black',
-            padding: '0.5rem',
-            textAlign: 'center',
-            display: 'center',
-            alignItems: 'center',
-            justifyContent: 'space-around',
-          }}
-        >
+        <StyleTextShahada>
           <Typography style={{ color: '#bcbba4' }}>
             Laa Ilaaha Illallah Muhammadur rasulAllah
           </Typography>{' '}
@@ -111,9 +103,18 @@ export default function Header() {
           <Typography style={{ color: '#bcbba4' }}>
             Laa Ilaaha Illallah Muhammadur rasulAllah
           </Typography>{' '}
-        </div>
+        </StyleTextShahada>
       </AppBar>
       <Toolbar />
     </Box>
   );
 }
+
+const StyleTextShahada = styled('div')(() => ({
+  backgroundColor: 'black',
+  padding: '0.5rem',
+  textAlign: 'center',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-around',
+}));
