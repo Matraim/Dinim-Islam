@@ -1,25 +1,21 @@
-import { Container, Link, Card as MuiCard } from '@mui/material';
-import styled from 'styled-components';
+import { Container, Link, Card, CardContent, Typography } from '@mui/material';
+import { styled } from '@mui/system';
 import { quranData } from '../data/quranData';
 
 const Quran = () => {
   return (
     <Container>
-      <h1 style={{ textAlign: 'center' }}>Куран жаттаган хафиздер</h1>
+      <Title>Куран жаттаган хафиздер</Title>
       <CardContainer>
         {quranData.map((item) => (
           <Link key={item.id} to={item.path}>
-            <Card>
-              <Image src={item.imageUrl} alt={item.name} />
-              <CardContent>
-                <Title>{item.name}</Title>
-                <TextRow>
-                  <Text>{item.nationality}</Text>
-                  <Text>|</Text>
-                  <Text>{item.position}</Text>
-                </TextRow>
-              </CardContent>
-            </Card>
+            <StyledCard>
+              <CardImage src={item.imageUrl} alt={item.name} />
+              <CardContentStyled>
+                <CardTitle>{item.name}</CardTitle>
+                <CardSubtitle>{`${item.nationality} | ${item.city}`}</CardSubtitle>
+              </CardContentStyled>
+            </StyledCard>
           </Link>
         ))}
       </CardContainer>
@@ -29,47 +25,50 @@ const Quran = () => {
 
 export default Quran;
 
-const CardContainer = styled.div`
+const Title = styled(Typography)`
+  text-align: center;
+  margin-bottom: 20px;
+`;
+
+const CardContainer = styled('div')`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
+  gap: 20px;
   cursor: pointer;
 `;
 
-const Card = styled(MuiCard)`
-  flex: 1 1 calc(20% - 20px);
-  margin: 10px;
+const StyledCard = styled(Card)`
+  width: 250px;
+  max-width: 300px;
   position: relative;
-  max-width: 400px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 `;
 
-const Image = styled.img`
-  height: 180px;
+const CardImage = styled('img')`
   width: 100%;
-  object-fit: cover;
+  height: auto;
+  border-radius: 5px;
 `;
 
-const CardContent = styled.div`
-  padding: 0.5rem;
-  position: relative;
+const CardContentStyled = styled(CardContent)`
+  padding: 16px;
 `;
 
-const Title = styled.h2`
-  font-size: 1.5rem;
+const CardTitle = styled(Typography)`
+  font-size: 1rem;
+  font-weight: bold;
   margin-bottom: 0.5rem;
+  text-align: center;
 `;
 
-const TextRow = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 0.5rem;
-`;
-
-const Text = styled.div`
+const CardSubtitle = styled(Typography)`
   font-size: 1rem;
   color: #666;
-  margin-right: 5px;
   text-align: center;
 `;
