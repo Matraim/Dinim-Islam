@@ -5,6 +5,7 @@ import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { images, listData } from '../data/img';
 import Sliders from '../components/Sliders';
 import BackForwardButtons from './BackForwardButtons';
+import Naziat from './Naziat';
 
 const Home = () => {
   return (
@@ -47,7 +48,9 @@ const Home = () => {
           ))}
         </List>
       </Section>
-
+      <div>
+        <Naziat />
+      </div>
       <Section>
         <iframe
           width="100%"
