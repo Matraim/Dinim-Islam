@@ -48,9 +48,6 @@ const Home = () => {
           ))}
         </List>
       </Section>
-      <div>
-        <Naziat />
-      </div>
       <Section>
         <iframe
           width="100%"
@@ -61,9 +58,12 @@ const Home = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
-        <StyleTexth4>Your browser does not support the video tag.</StyleTexth4>
       </Section>
       <BackForwardButtons />
+      <StyleTexth4>"ЭСКЕРТКИН,- ЭСКЕРТҮҮ МОМУНДАРГА ПАЙДА БЕРЕТ"</StyleTexth4>
+      <div>
+        <Naziat />
+      </div>
     </Container>
   );
 };
@@ -72,7 +72,7 @@ export default Home;
 
 const StyleTexth4 = styled('h4')(() => ({
   textAlign: 'center',
-  padding: '1rem',
+  paddingTop: '1rem',
 }));
 
 const StyledCard = styled(Card)(() => ({
